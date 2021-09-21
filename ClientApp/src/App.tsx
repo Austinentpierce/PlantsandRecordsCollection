@@ -1,19 +1,23 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { AddPlant } from './Pages/AddPlant'
+import { Link, Route, Switch } from 'react-router-dom'
+import { Homepage } from './Pages/Homepage'
 
 export function App() {
   return (
-    <main>
+    <>
       <header>
-        <Link to="#">
-          <div className=" leaf fas fa-3x fa-leaf"></div>
+        <div className=" leaf fas fa-3x fa-leaf"></div>
+        <Link to="/">
+          <div className="mainhead">B P and R</div>
         </Link>
-        <div className="mainhead">B P and R</div>
         <div className=" vinyl fas fa-3x fa-record-vinyl"></div>
       </header>
-      <AddPlant />
+      <Switch>
+        <Route exact path="/">
+          <Homepage />
+        </Route>
+      </Switch>
       <footer>Created with ♥ in Tampa, Florida </footer>
-    </main>
+    </>
   )
 }

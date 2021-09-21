@@ -1,20 +1,18 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-export function App() {
+export function Homepage() {
   return (
-    <main>
-      <header>
-        <div className=" leaf fas fa-3x fa-leaf"></div>
-        <div className="mainhead">B P and R</div>
-        <div className=" vinyl fas fa-3x fa-record-vinyl"></div>
-      </header>
+    <main className="Home">
       <div className="plantpic">
         <h2>plants.</h2>
-        <img
-          src="https://d39l2hkdp2esp1.cloudfront.net/img/photo/174043/174043_00_2x.jpg?20190722043957"
-          width="275"
-          height="275"
-        ></img>
+        <Link to="/plants">
+          <img
+            src="https://d39l2hkdp2esp1.cloudfront.net/img/photo/174043/174043_00_2x.jpg?20190722043957"
+            width="275"
+            height="275"
+          ></img>
+        </Link>
       </div>
       <div className="vinylpic">
         <h2>records.</h2>
@@ -24,7 +22,6 @@ export function App() {
           height="275"
         ></img>
       </div>
-      <footer>Created with ♥ in Tampa, Florida </footer>
     </main>
   )
 }

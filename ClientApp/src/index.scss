@@ -25,6 +25,8 @@ header {
   margin-top: 1rem;
   font-size: 2rem;
   font-family: 'Josefin Sans', sans-serif;
+  color: black;
+  text-decoration: none;
 }
 .plantpic {
   text-align: center;
@@ -51,4 +53,52 @@ footer {
   font-family: 'Josefin Sans', sans-serif;
   text-align: center;
   text-decoration: underline;
+}
+.plantbuttons {
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 20px;
+  letter-spacing: 4px;
+  position: relative;
+  background-color: #16a085;
+  border: none;
+  color: #fff;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  transition-duration: 0.4s;
+  overflow: hidden;
+  box-shadow: 0 5px 15px #193047;
+  border-radius: 4px;
+}
+
+.plantbuttons:hover {
+  background: #fff;
+  box-shadow: 0px 2px 10px 5px #1abc9c;
+  color: #000;
+}
+
+.plantbuttons:after {
+  content: '';
+  background: #1abc9c;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
+
+.button:focus {
+  outline: 0;
 }
