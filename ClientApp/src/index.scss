@@ -1,3 +1,6 @@
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
+
 :root {
   font: 16px / 1 sans-serif;
 }
@@ -7,4 +10,45 @@ html {
 body {
   margin: 0;
   min-height: 100%;
+  background-color: #4f7942;
+}
+header {
+  display: flex;
+  justify-content: center;
+  background-color: burlywood;
+  box-shadow: black 0.35rem 0.35rem;
+  margin: 1rem;
+  text-shadow: white 0.1rem 0.1rem;
+  justify-content: space-between;
+}
+.mainhead {
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-family: 'Josefin Sans', sans-serif;
+}
+.plantpic {
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.5rem;
+  text-shadow: white 0.05rem 0.05rem;
+}
+.plantpic img {
+  border-radius: 0.85rem;
+  box-shadow: black 0.35rem 0.35rem;
+}
+.vinylpic {
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.5rem;
+  text-shadow: white 0.005rem 0.1rem;
+}
+.vinylpic img {
+  border-radius: 0.85rem;
+  box-shadow: black 0.35rem 0.35rem;
+}
+footer {
+  margin: 2rem;
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+  text-decoration: underline;
 }
