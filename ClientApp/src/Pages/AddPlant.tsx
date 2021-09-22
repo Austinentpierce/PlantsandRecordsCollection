@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export function AddPlant() {
   return (
@@ -29,7 +30,9 @@ export function AddPlant() {
           <input className="B" placeholder="Describe the plant" />
         </p>
       </form>
-      <button className="plantbox">Add Plant</button>
+      <Link to="/Plants">
+        <button className="plantbox">Add Plant</button>
+      </Link>
     </main>
   )
 }

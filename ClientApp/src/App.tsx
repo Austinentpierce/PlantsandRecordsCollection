@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, Route, Switch } from 'react-router-dom'
 import { AddPlant } from './Pages/AddPlant'
+import { AddVinyl } from './Pages/AddVinyl'
 import { Homepage } from './Pages/Homepage'
 import { Plants } from './Pages/Plants'
 import { Vinyls } from './Pages/Vinyls'
