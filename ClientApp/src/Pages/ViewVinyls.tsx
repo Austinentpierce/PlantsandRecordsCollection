@@ -2,7 +2,7 @@ import React from 'react'
 
 export function ViewVinyls() {
   return (
-    <main className="ViewPageVinyls">
+    <main className="VinylsPage">
       <input className="vinylsearch" placeholder="Search" />
     </main>
   )

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export function AddPlant() {
   return (
-    <main className="AddPagePlants">
+    <main className="PlantsPage">
       <form>
         <p className="form-inputs">
           <label>Name: </label>

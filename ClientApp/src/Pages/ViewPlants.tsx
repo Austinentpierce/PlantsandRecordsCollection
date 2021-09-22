@@ -2,7 +2,7 @@ import React from 'react'
 
 export function ViewPlants() {
   return (
-    <main className="ViewPagePlants">
+    <main className="PlantsPage">
       <input className="plantsearch" placeholder="Search" />
     </main>
   )

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export function AddVinyl() {
   return (
-    <main className="page2vinyl">
+    <main className="VinylsPage">
       <form>
         <p className="addVinylForm">
           <label>Album Name: </label>

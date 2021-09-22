@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 export function Plants() {
   return (
-    <main className="page1plants">
+    <main className="PlantsPage">
       <input className="plantsearch" placeholder="Search" />
       <Link to="/AddPlant">
         <button className="plantbox">Add Plant</button>
