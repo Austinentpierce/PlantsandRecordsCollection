@@ -1,6 +1,6 @@
 import React from 'react'
 
-export function plants() {
+export function vinyls() {
   return (
     <main>
       <input>Search</input>

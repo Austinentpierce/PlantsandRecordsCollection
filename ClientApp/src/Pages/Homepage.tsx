@@ -16,11 +16,13 @@ export function Homepage() {
       </div>
       <div className="vinylpic">
         <h2>records.</h2>
-        <img
-          src="https://images.theconversation.com/files/78216/original/image-20150416-5628-6s1t8.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip"
-          width="275"
-          height="275"
-        ></img>
+        <Link to="/vinyls">
+          <img
+            src="https://images.theconversation.com/files/78216/original/image-20150416-5628-6s1t8.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip"
+            width="275"
+            height="275"
+          ></img>
+        </Link>
       </div>
     </main>
   )

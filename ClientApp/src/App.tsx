@@ -17,7 +17,9 @@ export function App() {
           <Homepage />
         </Route>
       </Switch>
-      <footer>Created with ♥ in Tampa, Florida </footer>
+      <footer>
+        Built with <i className="fa fa-heart"></i> in Tampa, Florida{' '}
+      </footer>
     </>
   )
 }
