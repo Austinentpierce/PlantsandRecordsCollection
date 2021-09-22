@@ -4,6 +4,8 @@ import { AddPlant } from './Pages/AddPlant'
 import { AddVinyl } from './Pages/AddVinyl'
 import { Homepage } from './Pages/Homepage'
 import { Plants } from './Pages/Plants'
+import { ViewPlants } from './Pages/ViewPlants'
+import { ViewVinyls } from './Pages/ViewVinyls'
 import { Vinyls } from './Pages/Vinyls'
 
 export function App() {
@@ -31,6 +33,12 @@ export function App() {
         </Route>
         <Route exact path="/AddVinyl">
           <AddVinyl />
+        </Route>
+        <Route exact path="/ViewPlants">
+          <ViewPlants />
+        </Route>
+        <Route exact path="/ViewVinyls">
+          <ViewVinyls />
         </Route>
       </Switch>
       <footer>

@@ -8,7 +8,9 @@ export function Plants() {
       <Link to="/AddPlant">
         <button className="plantbox">Add Plant</button>
       </Link>
-      <button className="plantbox">View All</button>
+      <Link to="/ViewPlants">
+        <button className="plantbox">View All</button>
+      </Link>
     </main>
   )
 }
