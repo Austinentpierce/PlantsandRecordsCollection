@@ -61,7 +61,8 @@ header {
   border: solid black;
 }
 footer {
-  margin: 3rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
   font-family: 'Josefin Sans', sans-serif;
   text-align: center;
   text-decoration: underline;
@@ -70,15 +71,39 @@ footer {
   box-shadow: black solid 0.35rem 0.35rem;
   border: black solid 0.1rem;
   font-size: 1.1rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
 }
-
-form.brown-and-green p:nth-child(even) {
+form.VinylAdds p:nth-child(even) {
   label {
-    color: burlywood;
+    color: black;
+    background-color: white;
+    box-shadow: black 0.15rem 0.15rem;
+    border: black solid 0.1rem;
   }
-
   input {
-    background-color: burlywood;
+    background-color: rgb(235, 80, 80);
+    text-align: center;
+    margin: 1rem;
+    border-radius: 0.85rem;
+    border: black solid 0.1rem;
+    color: black;
+    box-shadow: black 0.15rem 0.15rem;
+    font-size: 1rem;
+  }
+}
+form.VinylAdds p:nth-child(odd) {
+  label {
+    color: white;
+    background-color: black;
+    box-shadow: white 0.15rem 0.15rem;
+    border: white solid 0.1rem;
+  }
+  input {
+    background-color: rgb(130, 130, 247);
     text-align: center;
     margin: 1rem;
     border-radius: 0.85rem;
@@ -89,9 +114,32 @@ form.brown-and-green p:nth-child(even) {
   }
 }
 
+form.brown-and-green p:nth-child(even) {
+  label {
+    color: black;
+    background-color: white;
+    box-shadow: black 0.15rem 0.15rem;
+    border: black solid 0.1rem;
+  }
+
+  input {
+    background-color: burlywood;
+    text-align: center;
+    margin: 0.75rem;
+    border-radius: 0.85rem;
+    border: black solid 0.1rem;
+    color: black;
+    box-shadow: black 0.15rem 0.15rem;
+    font-size: 1rem;
+  }
+}
+
 form.brown-and-green p:nth-child(odd) {
   label {
-    color: darkgreen;
+    color: white;
+    background-color: black;
+    box-shadow: white 0.15rem 0.15rem;
+    border: white solid 0.1rem;
   }
 
   input {
@@ -104,10 +152,6 @@ form.brown-and-green p:nth-child(odd) {
     color: white;
     font-size: 1rem;
   }
-}
-
-p {
-  justify-content: center;
 }
 
 form {
@@ -200,6 +244,6 @@ form {
   left: 0;
   bottom: 0;
   right: 0;
-  background: url(https://pictures.dealer.com/v/volvocarsmissionviejovcna/1294/b4ce10696d16ba2df83e6c2480694c48x.jpg);
+  background: url(https://cdn.shopify.com/s/files/1/0005/6485/4899/files/pile-of-records.jpg?v=1567767319);
   z-index: -1;
 }

@@ -5,10 +5,12 @@ export function Vinyls() {
   return (
     <main className="VinylsPage">
       <input className="vinylsearch" placeholder="Search" />
-      <Link to="/AddVinyl">
+      <Link to="/Vinyls/Add">
         <button className="vinylbox">Add Vinyl</button>
       </Link>
-      <button className="vinylbox">View All</button>
+      <Link to="/Vinyls/View">
+        <button className="vinylbox">View All</button>
+      </Link>
     </main>
   )
 }

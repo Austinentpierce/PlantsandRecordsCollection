@@ -15,22 +15,22 @@ export function AddPlant() {
         </p>
         <p className="form-inputs">
           <label>Indoor or Outdoor?: </label>
-          <input placeholder="Enter location of plant" />
+          <input placeholder="Enter location of plant:" />
         </p>
         <p className="form-input">
           <label>Amount of watering: </label>
-          <input placeholder="Everyday, Every other day?" />
+          <input placeholder="Everyday, Every other day?:" />
         </p>
         <p className="form-inputs">
           <label>Pot Number: </label>
-          <input placeholder="Enter Pot number plant is in" />
+          <input placeholder="Enter Pot number plant is in:" />
         </p>
         <p className="form-input">
           <label>Description: </label>
-          <input placeholder="Describe the plant" />
+          <input placeholder="Describe the plant:" />
         </p>
       </form>
-      <Link to="/Plants">
+      <Link to="/Plants/list">
         <button className="plantbox">Add Plant</button>
       </Link>
     </main>

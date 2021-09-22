@@ -4,25 +4,25 @@ import { Link } from 'react-router-dom'
 export function AddVinyl() {
   return (
     <main className="VinylsPage">
-      <form>
-        <p className="addVinylForm">
+      <form className="VinylAdds">
+        <p className="addVinylForms">
           <label>Album Name: </label>
-          <input className="G" placeholder="Enter album name" />
+          <input placeholder="Enter album name:" />
         </p>
         <p className="addVinylForm">
           <label>Artist Name: </label>
-          <input className="B" placeholder="Enter artist name" />
+          <input placeholder="Enter artist name:" />
         </p>
-        <p className="addVinylForm">
+        <p className="addVinylForms">
           <label>Release Year: </label>
-          <input className="G" placeholder="Enter album release date" />
+          <input placeholder="Enter album release date:" />
         </p>
         <p className="addVinylForm">
           <label>Genre: </label>
-          <input className="B" placeholder="Enter album genre" />
+          <input placeholder="Enter album genre:" />
         </p>
       </form>
-      <Link to="/Vinyls">
+      <Link to="/Vinyls/List">
         <button className="vinylbox">Add Vinyl</button>
       </Link>
     </main>
