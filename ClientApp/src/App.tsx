@@ -28,6 +28,9 @@ export function App() {
         <Route exact path="/AddPlant">
           <AddPlant />
         </Route>
+        <Route exact path="/AddVinyl">
+          <AddVinyl />
+        </Route>
       </Switch>
       <footer>
         Built with <i className="fas fa-tree"></i> in Tampa, Florida{' '}
