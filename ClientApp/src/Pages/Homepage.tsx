@@ -18,7 +18,7 @@ export function Homepage() {
         <h2>records.</h2>
         <Link to="/Vinyls/List">
           <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFJ8NA0JGIPASYGpYV86pbW1HCIz2ULrUnPQ&usqp=CAU"
+            src="https://m.media-amazon.com/images/I/71-hDRLrbJL._AC_SL1500_.jpg"
             width="275"
             height="275"
           ></img>
