@@ -3,11 +3,9 @@ import React from 'react'
 export function Vinyls() {
   return (
     <main className="page1vinyl">
-      {/* <input>Search</input> */}
-      <div className="vinylbuttons">
-        <button>Add</button>
-        <button>View all vinyls</button>
-      </div>
+      <input className="vinylsearch" placeholder="Search" />
+      <button className="vinylbox">Add Vinyl</button>
+      <button className="vinylbox">View All</button>
     </main>
   )
 }

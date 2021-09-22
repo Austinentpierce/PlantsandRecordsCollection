@@ -1,8 +1,9 @@
 import React from 'react'
 import { Link, Route, Switch } from 'react-router-dom'
+import { AddPlant } from './Pages/AddPlant'
 import { Homepage } from './Pages/Homepage'
-import { Plants } from './Pages/plants'
-import { Vinyls } from './Pages/vinyls'
+import { Plants } from './Pages/Plants'
+import { Vinyls } from './Pages/Vinyls'
 
 export function App() {
   return (
@@ -23,6 +24,9 @@ export function App() {
         </Route>
         <Route exact path="/Plants">
           <Plants />
+        </Route>
+        <Route exact path="/AddPlant">
+          <AddPlant />
         </Route>
       </Switch>
       <footer>
