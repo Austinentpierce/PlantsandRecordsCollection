@@ -1,12 +1,11 @@
 import React from 'react'
 
-export function plants() {
+export function Plants() {
   return (
-    <main>
-      <input>Search</input>
+    <main className="page1plants">
+      {/* <input>Search</input> */}
       <div className="plantbuttons">
         <button>Add</button>
-        <button>Delete</button>
         <button>View all plants</button>
       </div>
     </main>

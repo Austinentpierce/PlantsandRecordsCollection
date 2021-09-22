@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link, Route, Switch } from 'react-router-dom'
 import { Homepage } from './Pages/Homepage'
+import { Plants } from './Pages/plants'
+import { Vinyls } from './Pages/vinyls'
 
 export function App() {
   return (
@@ -16,9 +18,15 @@ export function App() {
         <Route exact path="/">
           <Homepage />
         </Route>
+        <Route exact path="/Vinyls">
+          <Vinyls />
+        </Route>
+        <Route exact path="/Plants">
+          <Plants />
+        </Route>
       </Switch>
       <footer>
-        Built with <i className="fa fa-heart"></i> in Tampa, Florida{' '}
+        Built with <i className="fas fa-tree"></i> in Tampa, Florida{' '}
       </footer>
     </>
   )

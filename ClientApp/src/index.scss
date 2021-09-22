@@ -11,6 +11,7 @@ body {
   margin: 0;
   min-height: 100%;
   background-color: #4f7942;
+  border: white solid 0.1rem;
 }
 header {
   display: flex;
@@ -20,7 +21,9 @@ header {
   margin: 1rem;
   text-shadow: white 0.1rem 0.1rem;
   justify-content: space-between;
+  border: black solid 0.1rem;
 }
+
 .mainhead {
   margin-top: 1rem;
   font-size: 2rem;
@@ -51,10 +54,11 @@ header {
   border: solid black;
 }
 footer {
-  margin: 2rem;
+  margin-top: 3rem;
   font-family: 'Josefin Sans', sans-serif;
   text-align: center;
   text-decoration: underline;
+  text-shadow: white 0.025rem 0.025rem;
 }
 .plantbuttons {
   text-align: center;
@@ -63,7 +67,7 @@ footer {
   font-size: 20px;
   letter-spacing: 4px;
   position: relative;
-  background-color: #16a085;
+  background-color: black;
   border: none;
   color: #fff;
   padding: 20px;
@@ -94,13 +98,62 @@ footer {
   transition: all 0.8s;
 }
 
-.button:active:after {
+.plantbutton:active:after {
   padding: 0;
   margin: 0;
   opacity: 1;
   transition: 0s;
 }
 
-.button:focus {
+.plantbutton:focus {
+  outline: 0;
+}
+
+.vinylbuttons {
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 20px;
+  letter-spacing: 4px;
+  position: relative;
+  background-color: #16a085;
+  border: none;
+  color: #fff;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  transition-duration: 0.4s;
+  overflow: hidden;
+  box-shadow: 0 5px 15px #193047;
+  border-radius: 4px;
+}
+
+.vinylbuttons:hover {
+  background: #fff;
+  box-shadow: 0px 2px 10px 5px #1abc9c;
+  color: #000;
+}
+
+.vinylbuttons:after {
+  content: '';
+  background: #1abc9c;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+
+.vinylbutton:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
+
+.vinylbutton:focus {
   outline: 0;
 }

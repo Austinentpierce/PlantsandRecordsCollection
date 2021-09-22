@@ -8,7 +8,7 @@ export function Homepage() {
         <h2>plants.</h2>
         <Link to="/plants">
           <img
-            src="https://d39l2hkdp2esp1.cloudfront.net/img/photo/174043/174043_00_2x.jpg?20190722043957"
+            src="https://monsteraplantresource.com/wp-content/uploads/2019/08/close-up-fresh-freshness-1964869-600x400-1.jpg"
             width="275"
             height="275"
           ></img>
@@ -18,7 +18,7 @@ export function Homepage() {
         <h2>records.</h2>
         <Link to="/vinyls">
           <img
-            src="https://images.theconversation.com/files/78216/original/image-20150416-5628-6s1t8.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFJ8NA0JGIPASYGpYV86pbW1HCIz2ULrUnPQ&usqp=CAU"
             width="275"
             height="275"
           ></img>

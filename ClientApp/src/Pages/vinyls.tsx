@@ -1,13 +1,12 @@
 import React from 'react'
 
-export function vinyls() {
+export function Vinyls() {
   return (
-    <main>
-      <input>Search</input>
-      <div className="plantbuttons">
+    <main className="page1vinyl">
+      {/* <input>Search</input> */}
+      <div className="vinylbuttons">
         <button>Add</button>
-        <button>Delete</button>
-        <button>View all plants</button>
+        <button>View all vinyls</button>
       </div>
     </main>
   )
