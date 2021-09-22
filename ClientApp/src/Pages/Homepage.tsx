@@ -6,7 +6,7 @@ export function Homepage() {
     <main className="Home">
       <div className="plantpic">
         <h2>plants.</h2>
-        <Link to="/plants">
+        <Link to="/plants/List">
           <img
             src="https://monsteraplantresource.com/wp-content/uploads/2019/08/close-up-fresh-freshness-1964869-600x400-1.jpg"
             width="275"
@@ -16,7 +16,7 @@ export function Homepage() {
       </div>
       <div className="vinylpic">
         <h2>records.</h2>
-        <Link to="/vinyls">
+        <Link to="/vinyls/list">
           <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFJ8NA0JGIPASYGpYV86pbW1HCIz2ULrUnPQ&usqp=CAU"
             width="275"

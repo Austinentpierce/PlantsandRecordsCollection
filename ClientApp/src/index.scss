@@ -11,9 +11,10 @@ body {
   margin: 0;
   min-height: 100%;
   background-color: #4f7942;
-  border: white solid 0.1rem;
+  border: darkgreen solid 0.1rem;
   align-items: center;
   justify-content: center;
+  background-image: linear-gradient(to bottom right, darkgreen, burlywood);
 }
 
 .vinylsearch {
@@ -28,9 +29,6 @@ header {
   text-shadow: white 0.1rem 0.1rem;
   justify-content: space-between;
   border: black solid 0.1rem;
-}
-.VinylsPage {
-  background-image: linear-gradient(to bottom right, red, yellow);
 }
 
 .mainhead {
@@ -63,34 +61,51 @@ header {
   border: solid black;
 }
 footer {
-  margin-top: 3rem;
+  margin: 3rem;
   font-family: 'Josefin Sans', sans-serif;
   text-align: center;
   text-decoration: underline;
-  text-shadow: white 0.025rem 0.025rem;
-}
-.G {
-  background-color: darkgreen;
-  text-align: center;
-  box-shadow: white 0.15rem 0.15rem;
-  display: grid;
-  margin: 1rem;
-  border-radius: 0.85rem;
-  border: black solid 0.1rem;
-  color: white;
-  font-size: 1rem;
-}
-.B {
+  text-shadow: white 0.05rem 0.05rem;
   background-color: burlywood;
-  text-align: center;
-  display: grid;
-  margin: 1rem;
-  border-radius: 0.85rem;
+  box-shadow: black solid 0.35rem 0.35rem;
   border: black solid 0.1rem;
-  color: black;
-  box-shadow: black 0.15rem 0.15rem;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
+
+form.brown-and-green p:nth-child(even) {
+  label {
+    color: burlywood;
+  }
+
+  input {
+    background-color: burlywood;
+    text-align: center;
+    margin: 1rem;
+    border-radius: 0.85rem;
+    border: black solid 0.1rem;
+    color: black;
+    box-shadow: black 0.15rem 0.15rem;
+    font-size: 1rem;
+  }
+}
+
+form.brown-and-green p:nth-child(odd) {
+  label {
+    color: darkgreen;
+  }
+
+  input {
+    background-color: darkgreen;
+    text-align: center;
+    box-shadow: white 0.15rem 0.15rem;
+    margin: 1rem;
+    border-radius: 0.85rem;
+    border: black solid 0.1rem;
+    color: white;
+    font-size: 1rem;
+  }
+}
+
 p {
   justify-content: center;
 }
@@ -104,7 +119,7 @@ form {
   border: black solid 0.1rem;
   background-color: darkgreen;
   color: white;
-  box-shadow: white 0.15rem 0.15rem;
+  box-shadow: white 0.2rem 0.2rem;
   text-align: center;
   margin: 2rem;
   font-size: 1.35rem;
@@ -162,4 +177,29 @@ form {
   position: relative;
   overflow: hidden;
   margin: 3rem;
+}
+
+.plants-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: url(https://content.globalforestwatch.org/wp-content/uploads/2021/01/GFR-Malaysia-Kalimantan-border-tropical-forest-homepage_0.jpg);
+  z-index: -1;
+}
+
+.PlantsPage form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.vinyls-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: url(https://pictures.dealer.com/v/volvocarsmissionviejovcna/1294/b4ce10696d16ba2df83e6c2480694c48x.jpg);
+  z-index: -1;
 }

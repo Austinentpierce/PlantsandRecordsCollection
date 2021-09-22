@@ -22,27 +22,41 @@ export function App() {
         <Route exact path="/">
           <Homepage />
         </Route>
-        <Route exact path="/Vinyls">
-          <Vinyls />
+
+        <Route path="/Vinyls">
+          <div className="vinyls-background"></div>
+
+          <Switch>
+            <Route exact path="/Vinyls/List">
+              <Vinyls />
+            </Route>
+            <Route exact path="/Vinyls/Add">
+              <AddVinyl />
+            </Route>
+            <Route exact path="/Vinyls/View">
+              <ViewVinyls />
+            </Route>
+          </Switch>
         </Route>
-        <Route exact path="/Plants">
-          <Plants />
-        </Route>
-        <Route exact path="/AddPlant">
-          <AddPlant />
-        </Route>
-        <Route exact path="/AddVinyl">
-          <AddVinyl />
-        </Route>
-        <Route exact path="/ViewPlants">
-          <ViewPlants />
-        </Route>
-        <Route exact path="/ViewVinyls">
-          <ViewVinyls />
+
+        <Route path="/Plants">
+          <div className="plants-background"></div>
+
+          <Switch>
+            <Route exact path="/Plants/List">
+              <Plants />
+            </Route>
+            <Route exact path="/Plants/Add">
+              <AddPlant />
+            </Route>
+            <Route exact path="/Plants/View">
+              <ViewPlants />
+            </Route>
+          </Switch>
         </Route>
       </Switch>
       <footer>
-        Built with <i className="fas fa-tree"></i> in Tampa, Florida{' '}
+        Built with <i className="fas fa-tree"></i> in Tampa, Florida
       </footer>
     </>
   )
