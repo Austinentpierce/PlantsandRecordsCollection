@@ -16,10 +16,6 @@ body {
   justify-content: center;
   background-image: linear-gradient(to bottom right, darkgreen, burlywood);
 }
-
-.vinylsearch {
-  border-radius: 0.85rem;
-}
 header {
   display: flex;
   justify-content: center;
@@ -68,13 +64,10 @@ footer {
   text-decoration: underline;
   text-shadow: white 0.05rem 0.05rem;
   background-color: burlywood;
-  box-shadow: black solid 0.35rem 0.35rem;
   border: black solid 0.1rem;
   font-size: 1.1rem;
+  position: sticky;
   margin: 1rem;
-  bottom: 0;
-  left: 0;
-  right: 0;
   height: 20px;
 }
 form.VinylAdds p:nth-child(even) {
@@ -85,14 +78,14 @@ form.VinylAdds p:nth-child(even) {
     border: black solid 0.1rem;
   }
   input {
-    background-color: rgb(235, 80, 80);
+    background-color: rgb(245, 60, 60);
     text-align: center;
     margin: 1rem;
     border-radius: 0.85rem;
     border: black solid 0.1rem;
     color: black;
     box-shadow: black 0.15rem 0.15rem;
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 }
 form.VinylAdds p:nth-child(odd) {
@@ -103,14 +96,14 @@ form.VinylAdds p:nth-child(odd) {
     border: white solid 0.1rem;
   }
   input {
-    background-color: rgb(130, 130, 247);
+    background-color: burlywood;
     text-align: center;
     margin: 1rem;
     border-radius: 0.85rem;
     border: black solid 0.1rem;
     color: black;
     box-shadow: black 0.15rem 0.15rem;
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -130,7 +123,7 @@ form.brown-and-green p:nth-child(even) {
     border: black solid 0.1rem;
     color: black;
     box-shadow: black 0.15rem 0.15rem;
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -150,7 +143,7 @@ form.brown-and-green p:nth-child(odd) {
     border-radius: 0.85rem;
     border: black solid 0.1rem;
     color: white;
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -161,7 +154,7 @@ form {
 .plantsearch {
   border-radius: 2rem;
   border: black solid 0.1rem;
-  background-color: darkgreen;
+  background-color: rgb(43, 145, 43);
   color: white;
   box-shadow: white 0.2rem 0.2rem;
   text-align: center;
@@ -171,7 +164,7 @@ form {
 .vinylsearch {
   border-radius: 2rem;
   border: black solid 0.1rem;
-  background-color: darkgreen;
+  background-color: rgb(245, 60, 60);
   color: white;
   box-shadow: white 0.15rem 0.15rem;
   text-align: center;
@@ -201,7 +194,7 @@ form {
   margin: 3rem;
 }
 .vinylbox {
-  background: linear-gradient(to bottom right, darkgreen, burlywood);
+  background: linear-gradient(to bottom right, red, burlywood);
   color: white;
   --width: 250px;
   --height: calc(var(--width) / 3);
@@ -253,6 +246,45 @@ form {
   align-items: center;
   justify-content: center;
 }
+.buttonaddv {
+  min-width: 300px;
+  min-height: 60px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: black;
+  background: red;
+  background: linear-gradient(to bottom right, red, burlywood);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px red;
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+}
+.buttonaddv::before {
+  content: '';
+  border-radius: 1000px;
+  min-width: calc(300px + 12px);
+  min-height: calc(60px + 12px);
+  border: 6px solid red;
+  box-shadow: 0 0 60px red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.3s ease-in-out 0s;
+}
+.buttonaddv:hover,
+.buttonaddv:focus {
+  color: black;
+  transform: translateY(-6px);
+}
 
 .button {
   min-width: 300px;
@@ -262,17 +294,18 @@ form {
   text-transform: uppercase;
   letter-spacing: 1.3px;
   font-weight: 700;
-  color: #313133;
+  color: black;
   background: darkgreen;
   background: linear-gradient(to bottom right, darkgreen, burlywood);
   border: none;
   border-radius: 1000px;
-  box-shadow: 12px 12px 24px rgba(79, 209, 197, 0.64);
+  box-shadow: 12px 12px 24px darkgreen;
   transition: all 0.3s ease-in-out 0s;
   cursor: pointer;
   outline: none;
   position: relative;
   padding: 10px;
+  text-decoration: none;
 }
 
 button::before {
@@ -281,7 +314,7 @@ button::before {
   min-width: calc(300px + 12px);
   min-height: calc(60px + 12px);
   border: 6px solid darkgreen;
-  box-shadow: 0 0 60px rgba(0, 255, 203, 0.64);
+  box-shadow: 0 0 60px darkgreen;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -292,7 +325,7 @@ button::before {
 
 .button:hover,
 .button:focus {
-  color: #313133;
+  color: black;
   transform: translateY(-6px);
 }
 

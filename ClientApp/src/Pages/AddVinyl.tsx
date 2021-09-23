@@ -6,24 +6,22 @@ export function AddVinyl() {
     <main className="VinylsPage">
       <form className="VinylAdds">
         <p className="addVinylForms">
-          <label>Album Name: </label>
-          <input placeholder="Enter album name:" />
+          <input placeholder="Enter album's name" />
         </p>
         <p className="addVinylForm">
-          <label>Artist Name: </label>
-          <input placeholder="Enter artist name:" />
+          <input placeholder="Enter artist's name" />
         </p>
         <p className="addVinylForms">
-          <label>Release Year: </label>
-          <input placeholder="Enter album release date:" />
+          <input placeholder="Enter album's release year" />
         </p>
         <p className="addVinylForm">
-          <label>Genre: </label>
-          <input placeholder="Enter album genre:" />
+          <input placeholder="Enter album's genre:" />
         </p>
       </form>
       <Link to="/Vinyls/List">
-        <button className="vinylbox">Add Vinyl</button>
+        <div className="wrap">
+          <button className="buttonaddv">Add Vinyl</button>
+        </div>
       </Link>
     </main>
   )

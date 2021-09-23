@@ -6,28 +6,22 @@ export function AddPlant() {
     <main className="PlantsPage">
       <form className="brown-and-green">
         <p className="form-inputs">
-          <label>Name: </label>
-          <input placeholder="Enter plant name" />
+          <input placeholder="Enter plant's name" />
         </p>
         <p className="form-input">
-          <label>Normal plant,Herb, Fruit, Vegetable?: </label>
-          <input placeholder="Enter plant type" />
+          <input placeholder="Normal ,Herb, Fruit, Vegetable? " />
         </p>
         <p className="form-inputs">
-          <label>Indoor or Outdoor?: </label>
-          <input placeholder="Enter location of plant:" />
+          <input placeholder="Indoor or Outdoor?" />
         </p>
         <p className="form-input">
-          <label>Amount of watering: </label>
-          <input placeholder="Everyday, Every other day?:" />
+          <input placeholder="How often does it need water?" />
         </p>
         <p className="form-inputs">
-          <label>Pot Number: </label>
-          <input placeholder="Enter Pot number plant is in:" />
+          <input placeholder="Enter Pot number plant is in" />
         </p>
         <p className="form-input">
-          <label>Description: </label>
-          <input placeholder="Describe the plant:" />
+          <input placeholder="Describe the plant" />
         </p>
       </form>
       <Link to="/Plants/list">
