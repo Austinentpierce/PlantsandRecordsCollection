@@ -31,7 +31,9 @@ export function AddPlant() {
         </p>
       </form>
       <Link to="/Plants/list">
-        <button className="plantbox">Add Plant</button>
+        <div className="wrap">
+          <button className="button">Submit</button>
+        </div>
       </Link>
     </main>
   )
