@@ -8,9 +8,9 @@ export function Homepage() {
         <h2>plants.</h2>
         <Link to="/Plants/List">
           <img
-            src="https://monsteraplantresource.com/wp-content/uploads/2019/08/close-up-fresh-freshness-1964869-600x400-1.jpg"
-            width="275"
-            height="275"
+            src="https://images.unsplash.com/photo-1567339858240-a891d7bc079e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+            width="250"
+            height="250"
           ></img>
         </Link>
       </div>
@@ -19,8 +19,8 @@ export function Homepage() {
         <Link to="/Vinyls/List">
           <img
             src="https://m.media-amazon.com/images/I/71-hDRLrbJL._AC_SL1500_.jpg"
-            width="275"
-            height="275"
+            width="250"
+            height="250"
           ></img>
         </Link>
       </div>

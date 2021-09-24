@@ -11,10 +11,10 @@ body {
   margin: 1rem;
   min-height: 100%;
   background-color: #4f7942;
-  border: darkgreen solid 0.25rem;
+  border: black solid 0.25rem;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(to bottom right, darkgreen, burlywood);
+  background-image: linear-gradient(to bottom right, rgb(1, 70, 1), burlywood);
 }
 header {
   display: flex;
@@ -25,11 +25,12 @@ header {
   text-shadow: white 0.1rem 0.1rem;
   justify-content: space-between;
   border: black solid 0.1rem;
+  font-size: 1rem;
 }
 
 .mainhead {
-  margin-top: 1rem;
-  font-size: 2rem;
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
   font-family: 'Josefin Sans', sans-serif;
   color: black;
   text-decoration: none;
@@ -39,23 +40,34 @@ header {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1.5rem;
   text-shadow: white 0.05rem 0.05rem;
+  text-decoration: underline;
+}
+
+.VinylsPage {
+  text-align: center;
 }
 .plantpic img {
   border-radius: 0.85rem;
-  box-shadow: white 0.35rem 0.35rem;
+  box-shadow: black 0.5rem 0.5rem;
   border: black solid;
+  // animation: rotation 6s infinite linear;
 }
 .vinylpic {
   text-align: center;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1.5rem;
-  text-shadow: white 0.005rem 0.1rem;
+  text-shadow: white 0.05rem 0.05rem;
+  margin: 1rem;
+  text-decoration: underline;
 }
+
 .vinylpic img {
   border-radius: 0.85rem;
-  box-shadow: black 0.35rem 0.35rem;
+  box-shadow: black 0.5rem 0.5rem;
   border: solid black;
+  // animation: rotation 6s infinite linear;
 }
+
 footer {
   margin-left: 2rem;
   margin-right: 2rem;
@@ -67,6 +79,7 @@ footer {
   border: black solid 0.1rem;
   font-size: 1.1rem;
   position: sticky;
+
   margin: 1rem;
   height: 20px;
 }
@@ -147,11 +160,7 @@ form.brown-and-green p:nth-child(odd) {
   }
 }
 
-//  {
-//   text-align: center;
-//   margin: 2rem;
-// }
-.plantsearch {
+input {
   border-radius: 2rem;
   border: black solid 0.1rem;
   background-color: rgb(43, 145, 43);
@@ -160,13 +169,14 @@ form.brown-and-green p:nth-child(odd) {
   text-align: center;
   margin: 2rem;
   font-size: 1.35rem;
+  justify-content: center;
 }
 .vinylsearch {
   border-radius: 2rem;
   border: black solid 0.1rem;
   background-color: rgb(245, 60, 60);
   color: white;
-  box-shadow: white 0.15rem 0.15rem;
+  box-shadow: red 12px 12px 24px;
   text-align: center;
   margin: 2rem;
   font-size: 1.35rem;
@@ -187,7 +197,7 @@ form.brown-and-green p:nth-child(odd) {
   border-radius: 2em;
   transform: perspective(500px) rotateY(-15deg);
   text-shadow: 6px 3px 2px rgba(0, 0, 0, 0.2);
-  box-shadow: white 0.25rem 0.25rem;
+  box-shadow: darkgreen 12px 12px 24px;
   transition: 0.5s;
   position: relative;
   overflow: hidden;
@@ -209,7 +219,7 @@ form.brown-and-green p:nth-child(odd) {
   border-radius: 2em;
   transform: perspective(500px) rotateY(-15deg);
   text-shadow: 6px 3px 2px rgba(0, 0, 0, 0.2);
-  box-shadow: white 0.25rem 0.25rem;
+  box-shadow: red 12px 12px 24px;
   transition: 0.5s;
   position: relative;
   overflow: hidden;
@@ -308,7 +318,7 @@ form.brown-and-green p:nth-child(odd) {
   text-decoration: none;
 }
 
-button::before {
+.button::before {
   content: '';
   border-radius: 1000px;
   min-width: calc(300px + 12px);
@@ -323,8 +333,8 @@ button::before {
   transition: all 0.3s ease-in-out 0s;
 }
 
-.button:hover,
-.button:focus {
+button:hover,
+button:focus {
   color: black;
   transform: translateY(-6px);
 }

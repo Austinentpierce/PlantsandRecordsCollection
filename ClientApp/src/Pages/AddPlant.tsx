@@ -26,7 +26,7 @@ export function AddPlant() {
       </form>
       <Link to="/Plants/list">
         <div className="wrap">
-          <button className="button">Submit</button>
+          <button className="button">Add Plant</button>
         </div>
       </Link>
     </main>

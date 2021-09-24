@@ -12,11 +12,11 @@ export function App() {
   return (
     <>
       <header>
-        <div className=" leaf fas fa-3x fa-leaf"></div>
+        <div className=" leaf fas fa-2x fa-leaf"></div>
         <Link to="/">
-          <div className="mainhead">B P and R</div>
+          <div className="mainhead">Plants and Records</div>
         </Link>
-        <div className=" vinyl fas fa-3x fa-record-vinyl"></div>
+        <div className=" vinyl fas fa-2x fa-record-vinyl"></div>
       </header>
       <Switch>
         <Route exact path="/">
