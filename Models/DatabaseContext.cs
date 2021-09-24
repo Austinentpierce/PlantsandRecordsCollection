@@ -15,6 +15,7 @@ namespace PlantsandRecordsCollection.Models
 
         // Add database tables here
         public DbSet<Plants> Plants { get; set; }
+        public DbSet<Vinyls> Vinyls { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
