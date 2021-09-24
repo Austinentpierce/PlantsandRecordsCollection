@@ -31,11 +31,19 @@ namespace PlantsandRecordsCollection.Controllers
         // Returns a list of all your Plants
         //
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Plants>>> GetPlants()
+        public async Task<ActionResult<IEnumerable<Plants>>> GetPlants(string filter)
         {
+            if (filter == null)
+            {
+                return await _context.Plants.OrderBy(row => row.Id).ToListAsync();
+            }
+            else
+            {
+                return await _context.Plants.OrderBy(row => row.Id).Where(Plant => Plant.Name.ToLower().Contains(filter.ToLower())).ToListAsync();
+            }
             // Uses the database context in `_context` to request all of the Plants, sort
             // them by row id and return them as a JSON array.
-            return await _context.Plants.OrderBy(row => row.Id).ToListAsync();
+
         }
 
         // GET: api/Plants/5

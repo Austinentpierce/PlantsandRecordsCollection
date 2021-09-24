@@ -1,25 +1,41 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useQuery } from 'react-query'
 import { PlantType } from '../types'
 
 export function ViewPlants() {
+  const [filterText, setFilterText] = useState('')
+
   const { data: Plants = [] } = useQuery<PlantType[]>(
-    'plants',
+    ['plants', filterText],
     async function () {
-      const response = await fetch('/api/Plants')
+      let url = '/api/Plants'
+
+      if (filterText.length !== 0) {
+        url = `/api/Plants?filter=${filterText}`
+      }
+
+      const response = await fetch(url)
       return response.json()
     }
   )
+
   console.log({ Plants })
   return (
     <main className="PlantsPage">
-      <input className="plantsearch" placeholder="Search Plants" />
+      <input
+        className="plantsearch"
+        placeholder="Search Plants"
+        value={filterText}
+        onChange={function (event) {
+          setFilterText(event.target.value)
+        }}
+      />
 
       <ul className="DiffPlants">
         {Plants.map(function (Plants) {
           return (
             <li key={Plants.id}>
-              <h2>{Plants.name}</h2>
+              <h2 className="PlantName">{Plants.name}</h2>
               <p>{Plants.type}</p>
               <p>{Plants.location}</p>
               <p>{Plants.watering}</p>

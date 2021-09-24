@@ -75,7 +75,7 @@ footer {
   text-shadow: white 0.05rem 0.05rem;
   background-color: burlywood;
   border: black solid 0.1rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   position: relative;
   height: 20px;
 }
@@ -248,7 +248,15 @@ input {
 }
 .DiffPlants {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 0.75rem;
+  font-size: 1rem;
+  list-style: none;
+  text-shadow: white 0.2rem 0.2rem;
+  text-align: center;
+  padding: 0;
+}
+.PlantName {
+  text-decoration: underline;
+  text-shadow: white 0.2rem 0.2rem;
 }
 
 .PlantsPage form {
