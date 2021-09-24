@@ -8,10 +8,10 @@ html {
   height: 100%;
 }
 body {
-  margin: 0;
+  margin: 1rem;
   min-height: 100%;
   background-color: #4f7942;
-  border: darkgreen solid 0.1rem;
+  border: darkgreen solid 0.25rem;
   align-items: center;
   justify-content: center;
   background-image: linear-gradient(to bottom right, darkgreen, burlywood);
@@ -147,10 +147,10 @@ form.brown-and-green p:nth-child(odd) {
   }
 }
 
-form {
-  text-align: center;
-  margin: 2rem;
-}
+//  {
+//   text-align: center;
+//   margin: 2rem;
+// }
 .plantsearch {
   border-radius: 2rem;
   border: black solid 0.1rem;
