@@ -69,8 +69,8 @@ header {
 }
 
 footer {
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin-left: 3.5rem;
+  margin-right: 3rem;
   font-family: 'Josefin Sans', sans-serif;
   text-align: center;
   text-decoration: underline;
@@ -78,9 +78,8 @@ footer {
   background-color: burlywood;
   border: black solid 0.1rem;
   font-size: 1.1rem;
-  position: sticky;
-
-  margin: 1rem;
+  bottom: 0;
+  position: absolute;
   height: 20px;
 }
 form.VinylAdds p:nth-child(even) {
@@ -180,6 +179,17 @@ input {
   text-align: center;
   margin: 2rem;
   font-size: 1.35rem;
+}
+.plantsearch {
+  border-radius: 2rem;
+  border: black solid 0.1rem;
+  background-color: darkgreen;
+  color: white;
+  box-shadow: darkgreen 12px 12px 24px;
+  text-align: center;
+  margin: 15px;
+  font-size: 1.35rem;
+  margin-top: 4rem;
 }
 .plantbox {
   background: linear-gradient(to bottom right, darkgreen, burlywood);
@@ -316,6 +326,7 @@ input {
   position: relative;
   padding: 10px;
   text-decoration: none;
+  margin: 2rem;
 }
 
 .button::before {
