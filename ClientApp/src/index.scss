@@ -69,8 +69,6 @@ header {
 }
 
 footer {
-  margin-left: 3.5rem;
-  margin-right: 3rem;
   font-family: 'Josefin Sans', sans-serif;
   text-align: center;
   text-decoration: underline;
@@ -78,8 +76,7 @@ footer {
   background-color: burlywood;
   border: black solid 0.1rem;
   font-size: 1.1rem;
-  bottom: 0;
-  position: absolute;
+  position: relative;
   height: 20px;
 }
 form.VinylAdds p:nth-child(even) {
