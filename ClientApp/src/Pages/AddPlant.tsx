@@ -1,33 +1,34 @@
 import React, { useState } from 'react'
 import { useMutation } from 'react-query'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import { PlantType } from '../types'
 
-export function AddPlant() {
-  async function submitNewPlant(plantToCreate: PlantType) {
-    const response = await fetch('/api/Plants', {
-      method: 'POST',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify(plantToCreate),
-    })
+async function submitNewPlant(plantToCreate: PlantType) {
+  const response = await fetch('/api/Plants/', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify(plantToCreate),
+  })
 
-    return response.json()
-  }
+  return response.json()
+}
+
+export function AddPlant() {
   const [newPlant, setNewPlant] = useState<PlantType>({
     id: undefined,
     name: '',
     type: '',
     location: '',
     watering: '',
-    pot: undefined,
+    pot: 0,
     description: '',
   })
   const createNewPlant = useMutation(submitNewPlant)
 
-  async function handleFormSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault()
-    createNewPlant.mutate(newPlant)
-  }
+  // async function handleFormSubmit(event: React.FormEvent<HTMLFormElement>) {
+  //   event.preventDefault()
+  //   createNewPlant.mutate(newPlant)
+  // }
 
   function handleNumberInputChange(event: React.ChangeEvent<HTMLInputElement>) {
     const value = event.target.value
@@ -49,7 +50,13 @@ export function AddPlant() {
 
   return (
     <main className="PlantsPage">
-      <form onSubmit={handleFormSubmit} className="brown-and-green">
+      <form
+        onSubmit={(event) => {
+          event.preventDefault()
+          createNewPlant.mutate(newPlant)
+        }}
+        className="brown-and-green"
+      >
         <p className="form-inputs">
           <input
             name="name"
@@ -98,12 +105,14 @@ export function AddPlant() {
             onChange={handleStringInputChange}
           />
         </p>
+
+        <input type="submit" value="Submit Plant" className="button" />
       </form>
-      <Link to="/Plants/list">
+      {/* <Link to="/Plants/list">
         <div className="wrap">
-          <button className="button">Add Plant</button>
+          <button className="button">Submit Plant</button>
         </div>
-      </Link>
+      </Link> */}
     </main>
   )
 }

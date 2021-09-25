@@ -4,13 +4,13 @@ export type PlantType = {
   type: string
   location: string
   watering: string
-  pot: number | undefined
+  pot: number
   description: string
 }
 export type VinylType = {
   id: number | undefined
-  Album: string
-  Artist: string
-  ReleaseYear: number | undefined
-  Genre: string
+  album: string
+  artist: string
+  releaseYear: number | undefined
+  genre: string
 }

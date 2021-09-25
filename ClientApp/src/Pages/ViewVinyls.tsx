@@ -19,10 +19,10 @@ export function ViewVinyls() {
         {Vinyls.map(function (Vinyls) {
           return (
             <li key={Vinyls.id}>
-              <h2 className="VinylName">{Vinyls.Album}</h2>
-              <p>{Vinyls.Artist}</p>
-              <p>{Vinyls.ReleaseYear}</p>
-              <p>{Vinyls.Genre}</p>
+              <h2 className="VinylName">The name of the album is</h2>
+              <p>{Vinyls.artist}</p>
+              <p>{Vinyls.releaseYear}</p>
+              <p>{Vinyls.genre}</p>
             </li>
           )
         })}
