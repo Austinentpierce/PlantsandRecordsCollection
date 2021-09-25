@@ -31,11 +31,19 @@ namespace PlantsandRecordsCollection.Controllers
         // Returns a list of all your Vinyls
         //
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Vinyls>>> GetVinyls()
+        public async Task<ActionResult<IEnumerable<Vinyls>>> GetVinyls(string filter)
         {
             // Uses the database context in `_context` to request all of the Vinyls, sort
             // them by row id and return them as a JSON array.
-            return await _context.Vinyls.OrderBy(row => row.Id).ToListAsync();
+            if (filter == null)
+            {
+                return await _context.Vinyls.OrderBy(row => row.Id).ToListAsync();
+            }
+            else
+            {
+                return await _context.Vinyls.OrderBy(row => row.Id).Where(Vinyl => Vinyl.Album.ToLower().Contains(filter.ToLower())).ToListAsync();
+            }
+
         }
 
         // GET: api/Vinyls/5
