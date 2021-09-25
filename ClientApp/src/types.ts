@@ -7,3 +7,10 @@ export type PlantType = {
   pot: number
   description: string
 }
+export type VinylType = {
+  id: number
+  Album: string
+  Artist: string
+  ReleaseYear: number
+  Genre: string
+}
