@@ -106,7 +106,7 @@ export function AddPlant() {
           />
         </p>
 
-        <input type="submit" value="Submit Plant" className="button" />
+        <input type="submit" value="Submit" className="SubmitPlant" />
       </form>
       {/* <Link to="/Plants/list">
         <div className="wrap">
