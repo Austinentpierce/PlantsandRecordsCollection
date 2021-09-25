@@ -26,6 +26,7 @@ header {
   justify-content: space-between;
   border: black solid 0.1rem;
   font-size: 1rem;
+  position: sticky;
 }
 
 .mainhead {
@@ -250,13 +251,23 @@ input {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1rem;
   list-style: none;
-  text-shadow: white 0.2rem 0.2rem;
+  text-shadow: darkgreen 0.1rem 0.1rem;
+  text-align: center;
+  padding: 0;
+}
+.DiffVinyls {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1rem;
+  list-style: none;
+  text-shadow: red 0.1rem 0.1rem;
   text-align: center;
   padding: 0;
 }
 .PlantName {
   text-decoration: underline;
-  text-shadow: white 0.2rem 0.2rem;
+}
+.VinylName {
+  text-decoration: underline;
 }
 
 .PlantsPage form {
@@ -270,7 +281,11 @@ input {
   left: 0;
   bottom: 0;
   right: 0;
-  background: url(https://cdn.shopify.com/s/files/1/0005/6485/4899/files/pile-of-records.jpg?v=1567767319);
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url(https://cdn.shopify.com/s/files/1/0005/6485/4899/files/pile-of-records.jpg?v=1567767319);
   z-index: -1;
 }
 .wrap {
