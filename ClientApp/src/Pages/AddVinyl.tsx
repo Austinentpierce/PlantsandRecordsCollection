@@ -52,6 +52,7 @@ export function AddVinyl() {
       >
         <p className="addVinylForms">
           <input
+            name="album"
             placeholder="Enter album's name"
             value={newVinyl.album}
             onChange={handleStringInputChange}
@@ -59,6 +60,7 @@ export function AddVinyl() {
         </p>
         <p className="addVinylForm">
           <input
+            name="artist"
             placeholder="Enter artist's name"
             value={newVinyl.artist}
             onChange={handleStringInputChange}
@@ -66,6 +68,7 @@ export function AddVinyl() {
         </p>
         <p className="addVinylForms">
           <input
+            name="releaseYear"
             placeholder="Enter album's release year"
             value={newVinyl.releaseYear}
             onChange={handleNumberInputChange}
@@ -73,6 +76,7 @@ export function AddVinyl() {
         </p>
         <p className="addVinylForm">
           <input
+            name="genre"
             placeholder="Enter album's genre:"
             value={newVinyl.genre}
             onChange={handleStringInputChange}
