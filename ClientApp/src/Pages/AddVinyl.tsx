@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useMutation } from 'react-query'
 import { useHistory } from 'react-router'
 // import { Link } from 'react-router-dom'
-import { VinylType } from '../types'
+import { APIError, VinylType } from '../types'
 
 async function submitNewVinyl(vinylToCreate: VinylType) {
   const response = await fetch('/api/Vinyls/', {
@@ -10,8 +10,11 @@ async function submitNewVinyl(vinylToCreate: VinylType) {
     headers: { 'content-type': 'application/json' },
     body: JSON.stringify(vinylToCreate),
   })
-
-  return response.json()
+  if (response.ok) {
+    return response.json()
+  } else {
+    throw await response.json()
+  }
 }
 
 export function AddVinyl() {
@@ -24,9 +27,16 @@ export function AddVinyl() {
     releaseYear: 0,
     genre: '',
   })
+  const [errorMessage, setErrorMessage] = useState('')
+
   const createNewVinyl = useMutation(submitNewVinyl, {
     onSuccess: function () {
       history.push('/')
+    },
+    onError: function (apiError: APIError) {
+      const newMessage = Object.values(apiError.errors).join('')
+
+      setErrorMessage(newMessage)
     },
   })
 
@@ -57,6 +67,7 @@ export function AddVinyl() {
         }}
         className="VinylAdds"
       >
+        {errorMessage ? <p className="formError">{errorMessage}</p> : null}
         <p className="addVinylForms">
           <input
             name="album"
