@@ -1,23 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useQuery } from 'react-query'
 import { CrystalType } from '../types'
 
 export function ViewCrystals() {
-  const { data: crystals = [] } = useQuery<CrystalType[]>(
-    'crystals',
-    async function () {
-      const response = await fetch('/api/Crystals')
+  const [filterText, setFilterText] = useState('')
 
+  const { data: Crystals = [] } = useQuery<CrystalType[]>(
+    ['crystals', filterText],
+    async function () {
+      let url = '/api/Crystals'
+
+      if (filterText.length !== 0) {
+        url = `/api/Crystals?filter=${filterText}`
+      }
+
+      const response = await fetch(url)
       return response.json()
     }
   )
-  console.log({ crystals })
+  console.log({ Crystals })
   return (
     <main className="CrystalsPage">
-      <input className="crystalsearch" placeholder="Search Crystals" />
+      <input
+        className="crystalsearch"
+        placeholder="Search Crystals"
+        value={filterText}
+        onChange={function (event) {
+          setFilterText(event.target.value)
+        }}
+      />
 
       <ul className="DiffCrystals">
-        {crystals.map(function (Crystals) {
+        {Crystals.map(function (Crystals) {
           return (
             <li key={Crystals.id}>
               <h2 className="CrystalName">{Crystals.name}</h2>

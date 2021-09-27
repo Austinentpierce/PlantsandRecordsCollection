@@ -31,11 +31,19 @@ namespace PlantsandRecordsCollection.Controllers
         // Returns a list of all your Crystals
         //
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Crystals>>> GetCrystals()
+        public async Task<ActionResult<IEnumerable<Crystals>>> GetCrystals(string filter)
         {
+            if (filter == null)
+            {
+                return await _context.Crystals.OrderBy(row => row.Id).ToListAsync();
+            }
+            else
+            {
+                return await _context.Crystals.OrderBy(row => row.Id).Where(Crystal => Crystal.Name.ToLower().Contains(filter.ToLower())).ToListAsync();
+            }
             // Uses the database context in `_context` to request all of the Crystals, sort
             // them by row id and return them as a JSON array.
-            return await _context.Crystals.OrderBy(row => row.Id).ToListAsync();
+
         }
 
         // GET: api/Crystals/5
