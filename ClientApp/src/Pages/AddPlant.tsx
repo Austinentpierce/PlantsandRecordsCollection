@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useMutation } from 'react-query'
+import { useHistory } from 'react-router'
 // import { Link } from 'react-router-dom'
 import { PlantType } from '../types'
 
@@ -14,6 +15,8 @@ async function submitNewPlant(plantToCreate: PlantType) {
 }
 
 export function AddPlant() {
+  const history = useHistory()
+
   const [newPlant, setNewPlant] = useState<PlantType>({
     id: undefined,
     name: '',
@@ -23,12 +26,11 @@ export function AddPlant() {
     pot: 0,
     description: '',
   })
-  const createNewPlant = useMutation(submitNewPlant)
-
-  // async function handleFormSubmit(event: React.FormEvent<HTMLFormElement>) {
-  //   event.preventDefault()
-  //   createNewPlant.mutate(newPlant)
-  // }
+  const createNewPlant = useMutation(submitNewPlant, {
+    onSuccess: function () {
+      history.push('/')
+    },
+  })
 
   function handleNumberInputChange(event: React.ChangeEvent<HTMLInputElement>) {
     const value = event.target.value
@@ -108,11 +110,6 @@ export function AddPlant() {
 
         <input type="submit" value="Submit" className="SubmitPlant" />
       </form>
-      {/* <Link to="/Plants/list">
-        <div className="wrap">
-          <button className="button">Submit Plant</button>
-        </div>
-      </Link> */}
     </main>
   )
 }

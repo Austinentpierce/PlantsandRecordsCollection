@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useMutation } from 'react-query'
+import { useHistory } from 'react-router'
 import { CrystalType } from '../types'
 
 async function submitNewcrystal(CrystalToCreate: CrystalType) {
@@ -13,6 +14,8 @@ async function submitNewcrystal(CrystalToCreate: CrystalType) {
 }
 
 export function AddCrystal() {
+  const history = useHistory()
+
   const [newCrystal, setNewCrystal] = useState<CrystalType>({
     id: undefined,
     name: '',
@@ -21,7 +24,11 @@ export function AddCrystal() {
     description: '',
   })
 
-  const createNewCrystal = useMutation(submitNewcrystal)
+  const createNewCrystal = useMutation(submitNewcrystal, {
+    onSuccess: function () {
+      history.push('/')
+    },
+  })
 
   function handleStringInputChange(event: React.ChangeEvent<HTMLInputElement>) {
     const value = event.target.value
@@ -73,7 +80,7 @@ export function AddCrystal() {
           />
         </p>
 
-        <input type="submit" value="Submit" className="SubmitAddCrystal" />
+        <input type="submit" value="Submit" className="SubmitCrystal" />
       </form>
     </main>
   )

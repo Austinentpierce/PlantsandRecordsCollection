@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useMutation } from 'react-query'
+import { useHistory } from 'react-router'
 // import { Link } from 'react-router-dom'
 import { VinylType } from '../types'
 
@@ -14,6 +15,8 @@ async function submitNewVinyl(vinylToCreate: VinylType) {
 }
 
 export function AddVinyl() {
+  const history = useHistory()
+
   const [newVinyl, setNewVinyl] = useState<VinylType>({
     id: undefined,
     album: '',
@@ -21,7 +24,11 @@ export function AddVinyl() {
     releaseYear: 0,
     genre: '',
   })
-  const createNewVinyl = useMutation(submitNewVinyl)
+  const createNewVinyl = useMutation(submitNewVinyl, {
+    onSuccess: function () {
+      history.push('/')
+    },
+  })
 
   function handleNumberInputChange(event: React.ChangeEvent<HTMLInputElement>) {
     const value = event.target.value
@@ -85,11 +92,6 @@ export function AddVinyl() {
 
         <input type="submit" value="Submit" className="SubmitVinyl" />
       </form>
-      {/* <Link to="/Vinyls/List">
-        <div className="wrap">
-          <button className="buttonaddv">Add Vinyl</button>
-        </div>
-      </Link> */}
     </main>
   )
 }
