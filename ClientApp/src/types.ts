@@ -21,3 +21,10 @@ export type CrystalType = {
   color: string
   description: string
 }
+export type APIError = {
+  errors: Record<string, string[]>
+  status: number
+  title: string
+  traceId: string
+  type: string
+}

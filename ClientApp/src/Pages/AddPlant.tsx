@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useMutation } from 'react-query'
 import { useHistory } from 'react-router'
 // import { Link } from 'react-router-dom'
-import { PlantType } from '../types'
+import { APIError, PlantType } from '../types'
 
 async function submitNewPlant(plantToCreate: PlantType) {
   const response = await fetch('/api/Plants/', {
@@ -10,8 +10,11 @@ async function submitNewPlant(plantToCreate: PlantType) {
     headers: { 'content-type': 'application/json' },
     body: JSON.stringify(plantToCreate),
   })
-
-  return response.json()
+  if (response.ok) {
+    return response.json()
+  } else {
+    throw await response.json()
+  }
 }
 
 export function AddPlant() {
@@ -26,9 +29,15 @@ export function AddPlant() {
     pot: 0,
     description: '',
   })
+  const [errorMessage, setErrorMessage] = useState('')
   const createNewPlant = useMutation(submitNewPlant, {
     onSuccess: function () {
       history.push('/')
+    },
+    onError: function (apiError: APIError) {
+      const newMessage = Object.values(apiError.errors).join('')
+
+      setErrorMessage(newMessage)
     },
   })
 
@@ -59,6 +68,7 @@ export function AddPlant() {
         }}
         className="brown-and-green"
       >
+        {errorMessage ? <p className="formError">{errorMessage}</p> : null}
         <p className="form-inputs">
           <input
             name="name"

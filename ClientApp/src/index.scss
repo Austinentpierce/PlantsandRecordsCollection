@@ -106,6 +106,16 @@ footer {
   margin: 3rem 1rem 1.5rem 1rem;
   box-shadow: black 0.35rem 0.35rem;
 }
+.formError {
+  padding: 1.25rem;
+  font-size: 1.25rem;
+  background-color: red;
+  color: white;
+  text-shadow: black 0.15rem 0.15rem;
+  margin: 1rem;
+  box-shadow: black 0.35rem 0.35rem;
+  border: black solid 0.15rem;
+}
 form.VinylAdds p:nth-child(even) {
   input {
     background-color: rgb(245, 60, 60);
