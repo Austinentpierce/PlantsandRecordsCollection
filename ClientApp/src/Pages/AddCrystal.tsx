@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useMutation } from 'react-query'
 import { useHistory } from 'react-router'
-import { CrystalType } from '../types'
+import { APIError, CrystalType } from '../types'
 
 async function submitNewcrystal(CrystalToCreate: CrystalType) {
   const response = await fetch('/api/Crystals/', {
@@ -9,8 +9,11 @@ async function submitNewcrystal(CrystalToCreate: CrystalType) {
     headers: { 'content-type': 'application/json' },
     body: JSON.stringify(CrystalToCreate),
   })
-
-  return response.json()
+  if (response.ok) {
+    return response.json()
+  } else {
+    throw await response.json()
+  }
 }
 
 export function AddCrystal() {
@@ -23,10 +26,16 @@ export function AddCrystal() {
     color: '',
     description: '',
   })
+  const [errorMessage, setErrorMessage] = useState('')
 
   const createNewCrystal = useMutation(submitNewcrystal, {
     onSuccess: function () {
       history.push('/')
+    },
+    onError: function (apiError: APIError) {
+      const newMessage = Object.values(apiError.errors).join('')
+
+      setErrorMessage(newMessage)
     },
   })
 
@@ -47,6 +56,7 @@ export function AddCrystal() {
           createNewCrystal.mutate(newCrystal)
         }}
       >
+        {errorMessage ? <p className="formError">{errorMessage}</p> : null}
         <p className="CrystalAdd">
           <input
             name="name"
