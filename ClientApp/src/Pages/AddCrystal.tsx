@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { useMutation } from 'react-query'
-// import { Link } from 'react-router-dom'
 import { CrystalType } from '../types'
 
 async function submitNewcrystal(CrystalToCreate: CrystalType) {
@@ -76,11 +75,6 @@ export function AddCrystal() {
 
         <input type="submit" value="Submit" className="SubmitAddCrystal" />
       </form>
-      {/* <Link to="/Crystals/list">
-        <div className="CrystalSubmit">
-          <button className="SubmitCrystal">Submit</button>
-        </div>
-      </Link> */}
     </main>
   )
 }
