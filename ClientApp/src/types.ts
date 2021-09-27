@@ -14,3 +14,10 @@ export type VinylType = {
   releaseYear: number | undefined
   genre: string
 }
+export type CrystalType = {
+  id: number | undefined
+  name: string
+  size: string
+  color: string
+  description: string
+}

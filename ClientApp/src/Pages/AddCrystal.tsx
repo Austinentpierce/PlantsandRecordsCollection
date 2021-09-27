@@ -14,9 +14,6 @@ export function AddCrystal() {
         <p className="CrystalAdd">
           <input placeholder="Enter Crystal's color" />
         </p>
-        <p className="CrystalAdds">
-          <input placeholder="Enter Crystal's type" />
-        </p>
         <p className="CrystalAdd">
           <input placeholder="Describe the Crystal" />
         </p>
