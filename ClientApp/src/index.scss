@@ -68,6 +68,19 @@ header {
   border: solid black;
   // animation: rotation 6s infinite linear;
 }
+.crystalpic {
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.5rem;
+  text-shadow: white 0.05rem 0.05rem;
+  margin: 1rem;
+  text-decoration: underline;
+}
+.crystalpic img {
+  border-radius: 0.85rem;
+  box-shadow: black 0.5rem 0.5rem;
+  border: solid black;
+}
 
 footer {
   font-family: 'Josefin Sans', sans-serif;

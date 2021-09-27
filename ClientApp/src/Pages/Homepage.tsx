@@ -24,6 +24,16 @@ export function Homepage() {
           ></img>
         </Link>
       </div>
+      <div className="crystalpic">
+        <h2>crystals.</h2>
+        <Link to="/Crystals/List">
+          <img
+            src="https://m.media-amazon.com/images/I/910RGqNPj0L._AC_SL1500_.jpg"
+            width="250"
+            height="250"
+          ></img>
+        </Link>
+      </div>
     </main>
   )
 }
