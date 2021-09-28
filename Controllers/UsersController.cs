@@ -19,6 +19,13 @@ namespace PlantsandRecordsCollection.Controllers
         // This is the variable you use to have access to your database
         private readonly DatabaseContext _context;
 
+        // Constructor that recives a reference to your database context
+        // and stores it in _context for you to use in your API methods
+        public UsersController(DatabaseContext context)
+        {
+            _context = context;
+        }
+
         // POST: api/Users
         //
         // Creates a new user in the database.

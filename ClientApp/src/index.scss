@@ -108,6 +108,101 @@ footer {
   margin: 3rem 1rem 1.5rem 1rem;
   box-shadow: black 0.35rem 0.35rem;
 }
+.leaf {
+  color: black;
+}
+.signupmain {
+  background-color: burlywood;
+  box-shadow: black 0.35rem 0.35rem;
+  margin: 2rem 5rem 2rem 5rem;
+
+  text-shadow: white 0.1rem 0.1rem;
+  justify-content: space-between;
+  border: black solid 0.1rem;
+  font-size: 2rem;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  color: black;
+}
+.signupinput {
+  background-color: rgb(245, 60, 60);
+  text-align: center;
+  margin: 1rem;
+  border-radius: 0.85rem;
+  border: black solid 0.1rem;
+  color: black;
+  box-shadow: red 12px 12px 24px;
+  font-size: 1.25rem;
+}
+.signupinput2 {
+  background-color: darkgreen;
+  text-align: center;
+  box-shadow: darkgreen 12px 12px 24px;
+  margin: 1rem;
+  border-radius: 0.85rem;
+  border: black solid 0.1rem;
+  color: white;
+  font-size: 1.25rem;
+}
+.signupinput3 {
+  background-color: purple;
+  text-align: center;
+  box-shadow: purple 12px 12px 24px;
+  margin: 1rem;
+  border-radius: 0.85rem;
+  border: black solid 0.1rem;
+  color: white;
+  font-size: 1.25rem;
+}
+.signuplabel {
+  margin-left: 1rem;
+  background-color: red;
+  color: white;
+  padding: 0.25rem;
+  box-shadow: black 0.25rem 0.25rem;
+  border: solid black 0.1rem;
+}
+.signuplabel2 {
+  margin-left: 1rem;
+  background-color: darkgreen;
+  color: white;
+  padding: 0.25rem;
+  box-shadow: black 0.25rem 0.25rem;
+  border: solid black 0.1rem;
+}
+.signuplabel3 {
+  margin-left: 1rem;
+  background-color: purple;
+  color: white;
+  padding: 0.25rem;
+  box-shadow: black 0.25rem 0.25rem;
+  border: solid black 0.1rem;
+}
+.signupsubmit {
+  min-width: 300px;
+  min-height: 60px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: black;
+  background: burlywood;
+  border: black;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px burlywood;
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  position: relative;
+  padding: 10px;
+  margin: 0;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+.signuppage {
+  text-align: center;
+}
 .formError {
   padding: 1rem;
   font-size: 1.25rem;

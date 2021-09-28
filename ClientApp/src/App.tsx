@@ -10,12 +10,15 @@ import { Vinyls } from './Pages/Vinyls'
 import { Crystals } from './Pages/Crystals'
 import { AddCrystal } from './Pages/AddCrystal'
 import { ViewCrystals } from './Pages/ViewCrystals'
+import { SignUp } from './Pages/SignUp'
 
 export function App() {
   return (
     <>
       <header>
-        <div className=" leaf fas fa-2x fa-leaf"></div>
+        <Link to="/signup">
+          <div className=" leaf fas fa-2x fa-leaf"></div>
+        </Link>
         <Link to="/">
           <div className="mainhead">Plants Records and Crystals</div>
         </Link>
@@ -72,6 +75,9 @@ export function App() {
               <ViewCrystals />
             </Route>
           </Switch>
+        </Route>
+        <Route path="/signup">
+          <SignUp />
         </Route>
       </Switch>
       <footer>
