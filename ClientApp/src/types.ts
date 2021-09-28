@@ -28,3 +28,8 @@ export type APIError = {
   traceId: string
   type: string
 }
+export type NewUserType = {
+  fullName: string
+  email: string
+  password: string
+}
