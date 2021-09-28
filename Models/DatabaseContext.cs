@@ -17,6 +17,7 @@ namespace PlantsandRecordsCollection.Models
         public DbSet<Plants> Plants { get; set; }
         public DbSet<Vinyls> Vinyls { get; set; }
         public DbSet<Crystals> Crystals { get; set; }
+        public DbSet<User> Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
