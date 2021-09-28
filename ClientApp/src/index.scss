@@ -16,9 +16,9 @@ body {
   justify-content: center;
   background-image: linear-gradient(
     to bottom right,
-    red,
-    rgb(1, 70, 1),
-    purple
+    rgb(254, 47, 47),
+    rgb(2, 92, 2),
+    rgb(159, 1, 159)
   );
 }
 header {
@@ -31,7 +31,6 @@ header {
   justify-content: space-between;
   border: black solid 0.1rem;
   font-size: 1rem;
-  position: sticky;
 }
 
 .mainhead {
@@ -107,7 +106,7 @@ footer {
   box-shadow: black 0.35rem 0.35rem;
 }
 .formError {
-  padding: 1.25rem;
+  padding: 1rem;
   font-size: 1.25rem;
   background-color: red;
   color: white;
@@ -115,6 +114,7 @@ footer {
   margin: 1rem;
   box-shadow: black 0.35rem 0.35rem;
   border: black solid 0.15rem;
+  text-align: center;
 }
 form.VinylAdds p:nth-child(even) {
   input {
@@ -124,7 +124,7 @@ form.VinylAdds p:nth-child(even) {
     border-radius: 0.85rem;
     border: black solid 0.1rem;
     color: black;
-    box-shadow: black 0.15rem 0.15rem;
+    box-shadow: red 12px 12px 24px;
     font-size: 1.25rem;
   }
 }
@@ -136,7 +136,7 @@ form.VinylAdds p:nth-child(odd) {
     border-radius: 0.85rem;
     border: black solid 0.1rem;
     color: black;
-    box-shadow: black 0.15rem 0.15rem;
+    box-shadow: black 12px 12px 24px;
     font-size: 1.25rem;
   }
 }
@@ -149,7 +149,7 @@ form.brown-and-green p:nth-child(even) {
     border-radius: 0.85rem;
     border: black solid 0.1rem;
     color: black;
-    box-shadow: black 0.15rem 0.15rem;
+    box-shadow: black 12px 12px 24px;
     font-size: 1.25rem;
   }
 }
@@ -158,7 +158,7 @@ form.brown-and-green p:nth-child(odd) {
   input {
     background-color: darkgreen;
     text-align: center;
-    box-shadow: white 0.15rem 0.15rem;
+    box-shadow: darkgreen 12px 12px 24px;
     margin: 1rem;
     border-radius: 0.85rem;
     border: black solid 0.1rem;
@@ -175,7 +175,7 @@ form.SkyBlueCrystal p:nth-child(even) {
     border-radius: 0.85rem;
     border: black solid 0.1rem;
     color: black;
-    box-shadow: black 0.15rem 0.15rem;
+    box-shadow: black 12px 12px 24px;
     font-size: 1.25rem;
   }
 }
@@ -184,7 +184,7 @@ form.SkyBlueCrystal p:nth-child(odd) {
   input {
     background-color: purple;
     text-align: center;
-    box-shadow: white 0.15rem 0.15rem;
+    box-shadow: purple 12px 12px 24px;
     margin: 1rem;
     border-radius: 0.85rem;
     border: black solid 0.1rem;
@@ -318,6 +318,19 @@ form.SkyBlueCrystal p:nth-child(odd) {
     url(data:image/jpeg;base64,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);
   z-index: -1;
 }
+.vinyls-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url(https://cdn.shopify.com/s/files/1/0005/6485/4899/files/pile-of-records.jpg?v=1567767319);
+  z-index: -1;
+}
 .DiffPlants {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1rem;
@@ -342,10 +355,7 @@ form.SkyBlueCrystal p:nth-child(odd) {
   text-align: center;
   padding: 0;
 }
-.PlantName {
-  text-decoration: underline;
-}
-.VinylName {
+.TitleName {
   text-decoration: underline;
 }
 
@@ -353,19 +363,6 @@ form.SkyBlueCrystal p:nth-child(odd) {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.vinyls-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
-    ),
-    url(https://cdn.shopify.com/s/files/1/0005/6485/4899/files/pile-of-records.jpg?v=1567767319);
-  z-index: -1;
 }
 .wrap {
   height: 100%;
@@ -422,14 +419,12 @@ form.SkyBlueCrystal p:nth-child(odd) {
   letter-spacing: 1.3px;
   font-weight: 700;
   color: black;
-  background: darkgreen;
   background: linear-gradient(to bottom right, darkgreen, burlywood);
   border: none;
   border-radius: 1000px;
   box-shadow: 12px 12px 24px darkgreen;
   transition: all 0.3s ease-in-out 0s;
   cursor: pointer;
-  outline: none;
   position: relative;
   padding: 10px;
   text-decoration: none;
@@ -444,14 +439,12 @@ form.SkyBlueCrystal p:nth-child(odd) {
   letter-spacing: 1.3px;
   font-weight: 700;
   color: black;
-  background: red;
   background: linear-gradient(to bottom right, red, burlywood);
   border: none;
   border-radius: 1000px;
   box-shadow: 12px 12px 24px red;
   transition: all 0.3s ease-in-out 0s;
   cursor: pointer;
-  outline: none;
   position: relative;
   padding: 10px;
   margin: 0;
@@ -467,14 +460,12 @@ form.SkyBlueCrystal p:nth-child(odd) {
   letter-spacing: 1.3px;
   font-weight: 700;
   color: black;
-  background: purple;
   background: linear-gradient(to bottom right, purple, burlywood);
   border: none;
   border-radius: 1000px;
   box-shadow: 12px 12px 24px purple;
   transition: all 0.3s ease-in-out 0s;
   cursor: pointer;
-  outline: none;
   position: relative;
   padding: 10px;
   margin: 0;

@@ -35,7 +35,7 @@ export function ViewPlants() {
         {Plants.map(function (Plants) {
           return (
             <li key={Plants.id}>
-              <h2 className="PlantName">{Plants.name}</h2>
+              <h2 className="TitleName">{Plants.name}</h2>
               <p>{Plants.type}</p>
               <p>{Plants.location}</p>
               <p>{Plants.watering}</p>

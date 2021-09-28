@@ -34,7 +34,7 @@ export function ViewCrystals() {
         {Crystals.map(function (Crystals) {
           return (
             <li key={Crystals.id}>
-              <h2 className="CrystalName">{Crystals.name}</h2>
+              <h2 className="TitleName">{Crystals.name}</h2>
               <p>{Crystals.size}</p>
               <p>{Crystals.color}</p>
               <p>{Crystals.description}</p>

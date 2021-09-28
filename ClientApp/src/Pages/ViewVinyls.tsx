@@ -33,7 +33,7 @@ export function ViewVinyls() {
         {Vinyls.map(function (Vinyls) {
           return (
             <li key={Vinyls.id}>
-              <h2 className="VinylName">{Vinyls.album}</h2>
+              <h2 className="TitleName">{Vinyls.album}</h2>
               <p>{Vinyls.artist}</p>
               <p>{Vinyls.releaseYear}</p>
               <p>{Vinyls.genre}</p>
