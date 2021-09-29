@@ -11,12 +11,15 @@ import { Crystals } from './Pages/Crystals'
 import { AddCrystal } from './Pages/AddCrystal'
 import { ViewCrystals } from './Pages/ViewCrystals'
 import { SignUp } from './Pages/SignUp'
+import { SignIn } from './Pages/SignIn'
 
 export function App() {
   return (
     <>
       <header>
-        <div className=" leaf fas fa-2x fa-leaf"></div>
+        <Link to="/signin">
+          <div className=" leaf fas fa-2x fa-leaf"></div>
+        </Link>
         <Link to="/">
           <div className="mainhead">Plants Records and Crystals</div>
         </Link>
@@ -78,6 +81,9 @@ export function App() {
         </Route>
         <Route path="/signup">
           <SignUp />
+        </Route>
+        <Route path="/signin">
+          <SignIn />
         </Route>
       </Switch>
       <footer>

@@ -114,7 +114,8 @@ footer {
 .vinyl {
   color: black;
 }
-.signupmain {
+.signupmain,
+.signinmain {
   background-color: burlywood;
   box-shadow: black 0.35rem 0.35rem;
   margin: 2rem 5rem 2rem 5rem;
@@ -127,7 +128,8 @@ footer {
   font-family: 'Josefin Sans', sans-serif;
   color: black;
 }
-.signupinput {
+.signupinput,
+.signininput {
   background-color: rgb(245, 60, 60);
   text-align: center;
   margin: 1rem;
@@ -147,7 +149,8 @@ footer {
   color: white;
   font-size: 1.25rem;
 }
-.signupinput3 {
+.signupinput3,
+.signininput2 {
   background-color: purple;
   text-align: center;
   box-shadow: purple 12px 12px 24px;
@@ -157,7 +160,8 @@ footer {
   color: white;
   font-size: 1.25rem;
 }
-.signuplabel {
+.signuplabel,
+.signinlabel {
   margin-left: 1rem;
   background-color: red;
   color: white;
@@ -173,7 +177,8 @@ footer {
   box-shadow: black 0.25rem 0.25rem;
   border: solid black 0.1rem;
 }
-.signuplabel3 {
+.signuplabel3,
+.signinlabel2 {
   margin-left: 1rem;
   background-color: purple;
   color: white;
@@ -181,7 +186,8 @@ footer {
   box-shadow: black 0.25rem 0.25rem;
   border: solid black 0.1rem;
 }
-.signupsubmit {
+.signupsubmit,
+.signinsubmit {
   min-width: 300px;
   min-height: 60px;
   font-family: 'Nunito', sans-serif;
@@ -203,8 +209,10 @@ footer {
   margin-top: 3rem;
   text-align: center;
 }
-.signuppage {
+.signuppage,
+.signinpage {
   text-align: center;
+  margin: 1rem;
 }
 .formError {
   padding: 1rem;
