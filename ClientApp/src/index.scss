@@ -14,12 +14,7 @@ body {
   border: black solid 0.25rem;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(
-    to bottom right,
-    red,
-    darkgreen,
-    rgb(159, 1, 159)
-  );
+  background-image: linear-gradient(to bottom right, darkgreen, burlywood);
 }
 header {
   display: flex;
@@ -108,12 +103,11 @@ footer {
   margin: 3rem 1rem 1.5rem 1rem;
   box-shadow: black 0.35rem 0.35rem;
 }
-.leaf {
-  color: black;
-}
+.leaf,
 .vinyl {
   color: black;
 }
+
 .signupmain,
 .signinmain {
   background-color: burlywood;
@@ -130,30 +124,39 @@ footer {
 }
 .signupinput,
 .signininput {
-  background-color: rgb(245, 60, 60);
+  background-color: darkgreen;
   text-align: center;
   margin: 1rem;
   border-radius: 0.85rem;
   border: black solid 0.1rem;
-  color: black;
-  box-shadow: red 12px 12px 24px;
+  color: white;
+  box-shadow: black 0.3rem 0.3rem;
   font-size: 1.25rem;
 }
 .signupinput2 {
-  background-color: darkgreen;
+  background-color: burlywood;
   text-align: center;
-  box-shadow: darkgreen 12px 12px 24px;
+  box-shadow: black 0.3rem 0.3rem;
   margin: 1rem;
   border-radius: 0.85rem;
   border: black solid 0.1rem;
   color: white;
   font-size: 1.25rem;
 }
-.signupinput3,
-.signininput2 {
-  background-color: purple;
+.signupinput3 {
+  background-color: darkgreen;
   text-align: center;
-  box-shadow: purple 12px 12px 24px;
+  box-shadow: black 0.3rem 0.3rem;
+  margin: 1rem;
+  border-radius: 0.85rem;
+  border: black solid 0.1rem;
+  color: white;
+  font-size: 1.25rem;
+}
+.signininput2 {
+  background-color: rgb(255, 213, 158);
+  text-align: center;
+  box-shadow: black 0.3rem 0.3rem;
   margin: 1rem;
   border-radius: 0.85rem;
   border: black solid 0.1rem;
@@ -163,24 +166,28 @@ footer {
 .signuplabel,
 .signinlabel {
   margin-left: 1rem;
-  background-color: red;
-  color: white;
-  padding: 0.25rem;
-  box-shadow: black 0.25rem 0.25rem;
-  border: solid black 0.1rem;
-}
-.signuplabel2 {
-  margin-left: 1rem;
   background-color: darkgreen;
   color: white;
   padding: 0.25rem;
   box-shadow: black 0.25rem 0.25rem;
   border: solid black 0.1rem;
 }
-.signuplabel3,
+.signuplabel2 {
+  background-color: burlywood;
+  color: white;
+  padding: 0.25rem;
+  box-shadow: black 0.25rem 0.25rem;
+  border: solid black 0.1rem;
+}
+.signuplabel3 {
+  background-color: darkgreen;
+  color: white;
+  padding: 0.25rem;
+  box-shadow: black 0.25rem 0.25rem;
+  border: solid black 0.1rem;
+}
 .signinlabel2 {
-  margin-left: 1rem;
-  background-color: purple;
+  background-color: burlywood;
   color: white;
   padding: 0.25rem;
   box-shadow: black 0.25rem 0.25rem;
@@ -196,10 +203,10 @@ footer {
   letter-spacing: 1.3px;
   font-weight: 700;
   color: black;
-  background: burlywood;
+  background: linear-gradient(to bottom right, darkgreen, burlywood);
   border: black;
   border-radius: 1000px;
-  box-shadow: 12px 12px 24px burlywood;
+  box-shadow: 12px 12px 24px darkgreen;
   transition: all 0.3s ease-in-out 0s;
   cursor: pointer;
   position: relative;
