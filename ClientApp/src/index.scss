@@ -154,7 +154,7 @@ footer {
   font-size: 1.25rem;
 }
 .signininput2 {
-  background-color: rgb(255, 213, 158);
+  background-color: burlywood;
   text-align: center;
   box-shadow: black 0.3rem 0.3rem;
   margin: 1rem;
@@ -164,7 +164,8 @@ footer {
   font-size: 1.25rem;
 }
 .signuplabel,
-.signinlabel {
+.signinlabel,
+.signuplabel3 {
   margin-left: 1rem;
   background-color: darkgreen;
   color: white;
@@ -172,20 +173,7 @@ footer {
   box-shadow: black 0.25rem 0.25rem;
   border: solid black 0.1rem;
 }
-.signuplabel2 {
-  background-color: burlywood;
-  color: white;
-  padding: 0.25rem;
-  box-shadow: black 0.25rem 0.25rem;
-  border: solid black 0.1rem;
-}
-.signuplabel3 {
-  background-color: darkgreen;
-  color: white;
-  padding: 0.25rem;
-  box-shadow: black 0.25rem 0.25rem;
-  border: solid black 0.1rem;
-}
+.signuplabel2,
 .signinlabel2 {
   background-color: burlywood;
   color: white;
@@ -193,6 +181,7 @@ footer {
   box-shadow: black 0.25rem 0.25rem;
   border: solid black 0.1rem;
 }
+
 .signupsubmit,
 .signinsubmit {
   min-width: 300px;
