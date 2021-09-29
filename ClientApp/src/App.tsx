@@ -16,13 +16,13 @@ export function App() {
   return (
     <>
       <header>
-        <Link to="/signup">
-          <div className=" leaf fas fa-2x fa-leaf"></div>
-        </Link>
+        <div className=" leaf fas fa-2x fa-leaf"></div>
         <Link to="/">
           <div className="mainhead">Plants Records and Crystals</div>
         </Link>
-        <div className=" vinyl fas fa-2x fa-record-vinyl"></div>
+        <Link to="/signup">
+          <div className=" vinyl fas fa-2x fa-record-vinyl"></div>
+        </Link>
       </header>
       <Switch>
         <Route exact path="/">

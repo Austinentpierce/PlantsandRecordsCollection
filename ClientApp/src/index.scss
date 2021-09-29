@@ -16,8 +16,8 @@ body {
   justify-content: center;
   background-image: linear-gradient(
     to bottom right,
-    rgb(254, 47, 47),
-    rgb(2, 92, 2),
+    red,
+    darkgreen,
     rgb(159, 1, 159)
   );
 }
@@ -109,6 +109,9 @@ footer {
   box-shadow: black 0.35rem 0.35rem;
 }
 .leaf {
+  color: black;
+}
+.vinyl {
   color: black;
 }
 .signupmain {
