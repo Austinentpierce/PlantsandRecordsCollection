@@ -27,14 +27,6 @@ header {
   border: black solid 0.1rem;
   font-size: 1rem;
 }
-
-.mainhead {
-  margin-top: 0.5rem;
-  font-size: 1.1rem;
-  font-family: 'Josefin Sans', sans-serif;
-  color: black;
-  text-decoration: none;
-}
 footer {
   font-family: 'Josefin Sans', sans-serif;
   text-align: center;
@@ -47,6 +39,13 @@ footer {
   height: 20px;
   margin: 3rem 1rem 1.5rem 1rem;
   box-shadow: black 0.35rem 0.35rem;
+}
+.mainhead {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  font-family: 'Josefin Sans', sans-serif;
+  color: black;
+  text-decoration: none;
 }
 .leaf,
 .vinyl {
@@ -65,6 +64,7 @@ footer {
 }
 .TitleName {
   text-decoration: underline;
+  color: black;
 }
 
 .PlantsPage form {
