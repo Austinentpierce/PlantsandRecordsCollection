@@ -12,6 +12,7 @@ import { AddCrystal } from './Pages/AddCrystal'
 import { ViewCrystals } from './Pages/ViewCrystals'
 import { SignUp } from './Pages/SignUp'
 import { SignIn } from './Pages/SignIn'
+import { Plant } from './Pages/Plant'
 
 export function App() {
   return (
@@ -27,6 +28,7 @@ export function App() {
           <div className=" vinyl fas fa-2x fa-record-vinyl"></div>
         </Link>
       </header>
+
       <Switch>
         <Route exact path="/">
           <Homepage />
@@ -60,6 +62,9 @@ export function App() {
             </Route>
             <Route exact path="/Plants/View">
               <ViewPlants />
+            </Route>
+            <Route exact path="/Plants/View/:id">
+              <Plant />
             </Route>
           </Switch>
         </Route>

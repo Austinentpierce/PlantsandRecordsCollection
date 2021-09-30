@@ -1,9 +1,33 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { getUser, isLoggedIn, logout } from '../auth'
 
 export function Homepage() {
+  const user = getUser()
+  function handleLogout() {
+    logout()
+
+    window.location.assign('/')
+  }
   return (
     <main className="Home">
+      <section className="WelcomeSignout">
+        {isLoggedIn() ? (
+          <p className="UserName">Welcome back, {user.fullName}!</p>
+        ) : null}{' '}
+        {isLoggedIn() ? (
+          <a
+            href="/"
+            className="signoutbutton"
+            onClick={function (event) {
+              event.preventDefault()
+              handleLogout()
+            }}
+          >
+            <i className="fas fa-sign-out-alt"></i>
+          </a>
+        ) : null}
+      </section>
       <div className="plantpic">
         <h2>plants.</h2>
         <Link to="/Plants/List">

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useQuery } from 'react-query'
+import { SinglePlantFromList } from '../Components/SinglePlantFromList'
 import { PlantType } from '../types'
 
 export function ViewPlants() {
@@ -19,7 +20,6 @@ export function ViewPlants() {
     }
   )
 
-  console.log({ Plants })
   return (
     <main className="PlantsPage">
       <input
@@ -30,19 +30,11 @@ export function ViewPlants() {
           setFilterText(event.target.value)
         }}
       />
+      <section className="map"></section>
 
       <ul className="DiffPlants">
-        {Plants.map(function (Plants) {
-          return (
-            <li key={Plants.id}>
-              <h2 className="TitleName">{Plants.name}</h2>
-              <p>{Plants.type}</p>
-              <p>{Plants.location}</p>
-              <p>{Plants.watering}</p>
-              <p>{Plants.pot}</p>
-              <p>{Plants.description}</p>
-            </li>
-          )
+        {Plants.map(function (Plant) {
+          return <SinglePlantFromList key={Plant.id} plant={Plant} />
         })}
       </ul>
     </main>

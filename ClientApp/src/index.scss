@@ -40,6 +40,34 @@ footer {
   margin: 3rem 1rem 1.5rem 1rem;
   box-shadow: black 0.35rem 0.35rem;
 }
+.WelcomeSignout {
+  display: flex;
+  justify-content: center;
+}
+.signoutbutton {
+  color: black;
+  margin: 1.5rem 1rem 1.5rem 0;
+  text-align: center;
+  background-color: burlywood;
+  box-shadow: black 0.25rem 0.25rem;
+  border: black solid 0.1rem;
+  text-shadow: white 0.1rem 0.1rem;
+  padding: 0.1rem;
+}
+.UserName {
+  background-color: burlywood;
+  padding-top: 0.75rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin: 1rem;
+  text-align: center;
+  box-shadow: black 0.35rem 0.35rem;
+  border: black solid 0.1rem;
+  font-family: 'Nunito', sans-serif;
+  text-shadow: white 0.1rem 0.1rem;
+  text-decoration: underline;
+  font-size: 13px;
+}
 .mainhead {
   margin-top: 0.5rem;
   font-size: 1.1rem;
