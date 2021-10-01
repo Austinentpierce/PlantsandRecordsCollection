@@ -1,11 +1,10 @@
 import React from 'react'
 import { useQuery } from 'react-query'
-import { useParams } from 'react-router'
-// import { authHeader } from '../auth'
+import { useHistory, useParams } from 'react-router'
 import { PlantType } from '../types'
 
 async function loadOnePlant(id: string) {
-  const response = await fetch(`/api/Plants/View/${id}`)
+  const response = await fetch(`/api/Plants/${id}`)
 
   if (response.ok) {
     return response.json()
@@ -13,21 +12,6 @@ async function loadOnePlant(id: string) {
     throw await response.json()
   }
 }
-// async function handleDelete(event) {
-//   event.preventDefault()
-
-//   const response = await fetch(`/api/Plants/View/${id}`, {
-//     method: 'DELETE',
-//     headers: {
-//       'content-type': 'application/json',
-//       Authorization: authHeader(),
-//     },
-//   })
-
-//   if (response.status === 200 || response.status === 204) {
-//     history.push('/')
-//   }
-// }
 
 const NullPlant: PlantType = {
   id: undefined,
@@ -40,21 +24,44 @@ const NullPlant: PlantType = {
 }
 
 export function Plant() {
-  const { id } = useParams<{ id: string }>()
+  async function handleDelete(
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+    id: number
+  ) {
+    event.preventDefault()
 
+    const response = await fetch(`/api/Plants/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'content-type': 'application/json',
+        // ...(authHeader() as {}),
+      },
+    })
+
+    if (response.status === 200 || response.status === 204) {
+      history.push('/')
+    }
+  }
+  const { id } = useParams<{ id: string }>()
+  console.log(id)
+  const history = useHistory()
   const { data: plant = NullPlant } = useQuery<PlantType>(
     ['one-plant', id],
     () => loadOnePlant(id)
   )
+  console.log(NullPlant)
   return (
     <main className="SinglePlant">
       <h2 className="TitleName">{plant.name} </h2>
       <li>{plant.type}</li>
+      <li>{plant.location}</li>
       <li>{plant.watering}</li>
       <li>{plant.pot}</li>
       <li>{plant.description}</li>
 
-      {/* <button onClick={handleDelete}>Delete</button> */}
+      <button onClick={(event) => handleDelete(event, plant.id!)}>
+        Delete
+      </button>
     </main>
   )
 }
