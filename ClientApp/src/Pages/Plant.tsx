@@ -53,13 +53,16 @@ export function Plant() {
   return (
     <main className="SinglePlant">
       <h2 className="TitleName">{plant.name} </h2>
-      <li>{plant.type}</li>
-      <li>{plant.location}</li>
-      <li>{plant.watering}</li>
-      <li>{plant.pot}</li>
-      <li>{plant.description}</li>
+      <li className="SinglePlantList">{plant.type}</li>
+      <li className="SinglePlantList"> {plant.location}</li>
+      <li className="SinglePlantList"> {plant.watering}</li>
+      <li className="SinglePlantList"> {plant.pot}</li>
+      <li className="SinglePlantList"> {plant.description}</li>
 
-      <button onClick={(event) => handleDelete(event, plant.id!)}>
+      <button
+        className="DeletePlant"
+        onClick={(event) => handleDelete(event, plant.id!)}
+      >
         Delete
       </button>
     </main>
