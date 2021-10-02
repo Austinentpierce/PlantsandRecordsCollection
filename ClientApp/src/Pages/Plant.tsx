@@ -34,7 +34,6 @@ export function Plant() {
       method: 'DELETE',
       headers: {
         'content-type': 'application/json',
-        // ...(authHeader() as {}),
       },
     })
 

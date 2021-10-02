@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useQuery } from 'react-query'
+import { SingleVinylFromList } from '../Components/SingleVinylFromList'
 import { VinylType } from '../types'
 
 export function ViewVinyls() {
@@ -17,7 +18,7 @@ export function ViewVinyls() {
       return response.json()
     }
   )
-  console.log({ Vinyls })
+
   return (
     <main className="VinylsPage">
       <input
@@ -30,15 +31,8 @@ export function ViewVinyls() {
       />
 
       <ul className="DiffVinyls">
-        {Vinyls.map(function (Vinyls) {
-          return (
-            <li key={Vinyls.id}>
-              <h2 className="TitleName">{Vinyls.album}</h2>
-              <p>{Vinyls.artist}</p>
-              <p>{Vinyls.releaseYear}</p>
-              <p>{Vinyls.genre}</p>
-            </li>
-          )
+        {Vinyls.map(function (Vinyl) {
+          return <SingleVinylFromList key={Vinyl.id} vinyl={Vinyl} />
         })}
       </ul>
     </main>

@@ -3,9 +3,7 @@ import { Link } from 'react-router-dom'
 import { PlantType } from '../types'
 
 export function SinglePlantFromList(props: SinglePlantFromListProps) {
-  useEffect(() => {
-    console.log(props.plant)
-  })
+  useEffect(() => {})
 
   return (
     <main>

@@ -13,7 +13,7 @@ import { ViewCrystals } from './Pages/ViewCrystals'
 import { SignUp } from './Pages/SignUp'
 import { SignIn } from './Pages/SignIn'
 import { Plant } from './Pages/Plant'
-
+import { Vinyl } from './Pages/Vinyl'
 export function App() {
   return (
     <>
@@ -46,6 +46,9 @@ export function App() {
             </Route>
             <Route exact path="/Vinyls/View">
               <ViewVinyls />
+            </Route>
+            <Route exact path="/Vinyls/View/:id">
+              <Vinyl />
             </Route>
           </Switch>
         </Route>
