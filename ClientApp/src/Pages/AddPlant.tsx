@@ -117,6 +117,9 @@ export function AddPlant() {
             onChange={handleStringInputChange}
           />
         </p>
+        <p className="form-inputs">
+          <input type="file" name="picture" />
+        </p>
 
         <input type="submit" value="Submit" className="SubmitPlant" />
       </form>

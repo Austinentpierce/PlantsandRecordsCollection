@@ -89,6 +89,9 @@ export function AddCrystal() {
             onChange={handleStringInputChange}
           />
         </p>
+        <p className="CrystalAdds">
+          <input type="file" name="picture" />
+        </p>
 
         <input type="submit" value="Submit" className="SubmitCrystal" />
       </form>

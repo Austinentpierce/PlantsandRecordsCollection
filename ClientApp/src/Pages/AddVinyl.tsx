@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useMutation } from 'react-query'
 import { useHistory } from 'react-router'
-// import { Link } from 'react-router-dom'
 import { APIError, VinylType } from '../types'
 
 async function submitNewVinyl(vinylToCreate: VinylType) {
@@ -100,7 +99,9 @@ export function AddVinyl() {
             onChange={handleStringInputChange}
           />
         </p>
-
+        <p className="addVinylForms">
+          <input type="file" name="picture" />
+        </p>
         <input type="submit" value="Submit" className="SubmitVinyl" />
       </form>
     </main>
