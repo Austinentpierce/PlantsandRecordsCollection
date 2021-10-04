@@ -14,6 +14,8 @@ import { SignUp } from './Pages/SignUp'
 import { SignIn } from './Pages/SignIn'
 import { Plant } from './Pages/Plant'
 import { Vinyl } from './Pages/Vinyl'
+import { Crystal } from './Pages/Crystal'
+
 export function App() {
   return (
     <>
@@ -84,6 +86,9 @@ export function App() {
             </Route>
             <Route exact path="/Crystals/View">
               <ViewCrystals />
+            </Route>
+            <Route exact path="/Crystals/View/:id">
+              <Crystal />
             </Route>
           </Switch>
         </Route>

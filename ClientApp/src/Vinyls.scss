@@ -116,3 +116,8 @@ form.VinylAdds p:nth-child(odd) {
   margin-bottom: 3rem;
   margin-top: 3rem;
 }
+.VinylsPage form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

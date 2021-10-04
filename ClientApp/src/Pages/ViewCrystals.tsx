@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useQuery } from 'react-query'
+import { SingleCrystalFromList } from '../Components/SingleCrystalFromList'
 import { CrystalType } from '../types'
 
 export function ViewCrystals() {
@@ -31,15 +32,8 @@ export function ViewCrystals() {
       />
 
       <ul className="DiffCrystals">
-        {Crystals.map(function (Crystals) {
-          return (
-            <li key={Crystals.id}>
-              <h2 className="TitleName">{Crystals.name}</h2>
-              <p>{Crystals.size}</p>
-              <p>{Crystals.color}</p>
-              <p>{Crystals.description}</p>
-            </li>
-          )
+        {Crystals.map(function (Crystal) {
+          return <SingleCrystalFromList key={Crystal.id} crystal={Crystal} />
         })}
       </ul>
     </main>

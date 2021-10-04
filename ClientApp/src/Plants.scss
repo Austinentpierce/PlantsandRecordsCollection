@@ -92,7 +92,7 @@ form.brown-and-green p:nth-child(odd) {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1rem;
   list-style: none;
-  text-shadow: darkgreen 0.1rem 0.1rem;
+  text-shadow: white 0.1rem 0.1rem;
   text-align: center;
   padding: 0;
   color: black;
@@ -148,4 +148,9 @@ form.brown-and-green p:nth-child(odd) {
   padding: 10px;
   text-decoration: none;
   margin-top: 4rem;
+}
+.PlantsPage form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

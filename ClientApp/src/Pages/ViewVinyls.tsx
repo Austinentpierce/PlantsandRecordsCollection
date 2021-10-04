@@ -7,7 +7,7 @@ export function ViewVinyls() {
   const [filterText, setFilterText] = useState('')
 
   const { data: Vinyls = [] } = useQuery<VinylType[]>(
-    ['Vinyls', filterText],
+    ['vinyls', filterText],
     async function () {
       let url = '/api/Vinyls'
 
@@ -29,6 +29,7 @@ export function ViewVinyls() {
           setFilterText(event.target.value)
         }}
       />
+      <section className="map"></section>
 
       <ul className="DiffVinyls">
         {Vinyls.map(function (Vinyl) {
