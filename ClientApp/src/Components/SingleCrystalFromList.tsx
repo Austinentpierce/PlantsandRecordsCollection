@@ -10,13 +10,18 @@ export function SingleCrystalFromList(props: SingleCrystalFromListProps) {
   return (
     <main>
       <h2>
-        <Link to={`/Crystals/View/${props.crystal.id}`}>
+        <Link
+          className="crystal-link"
+          to={`/Crystals/View/${props.crystal.id}`}
+        >
           {props.crystal.name}
         </Link>
       </h2>
-      <li>{props.crystal.size}</li>
-      <li>{props.crystal.color}</li>
-      <li>{props.crystal.description}</li>
+      <ul className="Viewcrystallist">
+        <li>{props.crystal.size}</li>
+        <li>{props.crystal.color}</li>
+        <li>{props.crystal.description}</li>
+      </ul>
     </main>
   )
 }

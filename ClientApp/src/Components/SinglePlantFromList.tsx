@@ -8,15 +8,19 @@ export function SinglePlantFromList(props: SinglePlantFromListProps) {
   })
 
   return (
-    <main>
+    <main className="ViewPlants">
       <h2>
-        <Link to={`/Plants/View/${props.plant.id}`}>{props.plant.name}</Link>
+        <Link className="plant-link" to={`/Plants/View/${props.plant.id}`}>
+          {props.plant.name}
+        </Link>
       </h2>
-      <li>{props.plant.type}</li>
-      <li>{props.plant.location}</li>
-      <li>{props.plant.watering}</li>
-      <li>{props.plant.pot}</li>
-      <li>{props.plant.description}</li>
+      <ul className="Viewplantslist">
+        <li>{props.plant.type}</li>
+        <li>{props.plant.location}</li>
+        <li>{props.plant.watering}</li>
+        <li>{props.plant.pot}</li>
+        <li>{props.plant.description}</li>
+      </ul>
     </main>
   )
 }

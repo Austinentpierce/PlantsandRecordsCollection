@@ -29,8 +29,6 @@ export function ViewVinyls() {
           setFilterText(event.target.value)
         }}
       />
-      <section className="map"></section>
-
       <ul className="DiffVinyls">
         {Vinyls.map(function (Vinyl) {
           return <SingleVinylFromList key={Vinyl.id} vinyl={Vinyl} />

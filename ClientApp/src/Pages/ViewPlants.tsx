@@ -30,14 +30,11 @@ export function ViewPlants() {
           setFilterText(event.target.value)
         }}
       />
-      <section className="map"></section>
-
       {/* {
   plant.photoURL ? (
     <img alt="Restaurant Photo" width={200} src={plant.photoURL} />
   ) : null
 } */}
-
       <ul className="DiffPlants">
         {Plants.map(function (Plant) {
           return <SinglePlantFromList key={Plant.id} plant={Plant} />

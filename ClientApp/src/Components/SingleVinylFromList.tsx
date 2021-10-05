@@ -11,11 +11,15 @@ export function SingleVinylFromList(props: SingleVinylFromListProps) {
   return (
     <main>
       <h2>
-        <Link to={`/Vinyls/View/${props.vinyl.id}`}>{props.vinyl.album}</Link>
+        <Link className="vinyl-link" to={`/Vinyls/View/${props.vinyl.id}`}>
+          {props.vinyl.album}
+        </Link>
       </h2>
-      <li>{props.vinyl.artist}</li>
-      <li>{props.vinyl.releaseYear}</li>
-      <li>{props.vinyl.genre}</li>
+      <ul className="Viewvinyllist">
+        <li>{props.vinyl.artist}</li>
+        <li>{props.vinyl.releaseYear}</li>
+        <li>{props.vinyl.genre}</li>
+      </ul>
     </main>
   )
 }

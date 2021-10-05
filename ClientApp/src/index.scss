@@ -25,49 +25,31 @@ header {
   border: black solid 0.1rem;
   font-size: 1rem;
 }
+
+.page-wrapper {
+  padding-bottom: 1.5rem;
+}
+
 footer {
-  font-family: 'Josefin Sans', sans-serif;
-  text-align: center;
-  text-decoration: underline;
-  text-shadow: black 0.1rem 0.1rem;
-  background-color: burlywood;
-  border: black solid 0.1rem;
-  font-size: 1rem;
-  position: relative;
-  height: 20px;
-  margin: 3rem 1rem 1.5rem 1rem;
-  box-shadow: black 0.35rem 0.35rem;
-  transform: 80vh;
-  color: white;
-}
-.WelcomeSignout {
-  display: flex;
-  justify-content: center;
-}
-.signoutbutton {
-  color: black;
-  margin: 1.5rem 1rem 1.5rem 0;
-  text-align: center;
-  background-color: burlywood;
-  box-shadow: black 0.25rem 0.25rem;
-  border: black solid 0.1rem;
-  text-shadow: white 0.1rem 0.1rem;
-  padding: 0.1rem;
-}
-.UserName {
-  background-color: burlywood;
-  padding-top: 0.75rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  margin: 1rem;
-  text-align: center;
-  box-shadow: black 0.35rem 0.35rem;
-  border: black solid 0.1rem;
-  font-family: 'Nunito', sans-serif;
-  text-shadow: black 0.1rem 0.1rem;
-  text-decoration: underline;
-  font-size: 13px;
-  color: white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  p {
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+    text-decoration: underline;
+    text-shadow: black 0.1rem 0.1rem;
+    background-color: burlywood;
+    border: black solid 0.1rem;
+    font-size: 1rem;
+    position: relative;
+    box-shadow: black 0.35rem 0.35rem;
+    color: white;
+    margin: 0;
+    padding: 0.5rem;
+  }
 }
 .mainhead {
   margin-top: 0.5rem;
@@ -77,10 +59,15 @@ footer {
   text-decoration: none;
   text-shadow: black 0.1rem 0.1rem;
 }
-.leaf,
-.vinyl,
+.home-leaf,
+.home-vinyl {
+  color: blue;
+}
 .tree {
   color: darkgreen;
+}
+li {
+  list-style: none;
 }
 
 .formError {

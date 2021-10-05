@@ -15,92 +15,127 @@ import { SignIn } from './Pages/SignIn'
 import { Plant } from './Pages/Plant'
 import { Vinyl } from './Pages/Vinyl'
 import { Crystal } from './Pages/Crystal'
+import { EditPlant } from './Pages/EditPlant'
 
 export function App() {
   return (
     <>
       <header>
         <Link to="/signin">
-          <div className=" leaf fas fa-2x fa-leaf"></div>
+          <Switch>
+            <Route path="/Plants">
+              <div className="plants-leaf fas fa-2x fa-leaf"></div>
+            </Route>
+            <Route path="/Vinyls">
+              <div className="vinyl-leaf fas fa-2x fa-leaf"></div>
+            </Route>
+            <Route path="/Crystals">
+              <div className="crystal-leaf fas fa-2x fa-leaf"></div>
+            </Route>
+            <Route path="*">
+              <div className="home-leaf fas fa-2x fa-leaf"></div>
+            </Route>
+          </Switch>
         </Link>
         <Link to="/">
           <div className="mainhead">Plants Records and Crystals</div>
         </Link>
         <Link to="/signup">
-          <div className=" vinyl fas fa-2x fa-record-vinyl"></div>
+          <Switch>
+            <Route path="/Plants">
+              <div className="plants-vinyl fas fa-2x fa-record-vinyl"></div>
+            </Route>
+            <Route path="/Vinyls">
+              <div className="vinyls-vinyl fas fa-2x fa-record-vinyl"></div>
+            </Route>
+            <Route path="/Crystals">
+              <div className="crystals-vinyl fas fa-2x fa-record-vinyl"></div>
+            </Route>
+            <Route path="*">
+              <div className="home-vinyl fas fa-2x fa-record-vinyl"></div>
+            </Route>
+          </Switch>
         </Link>
       </header>
 
-      <Switch>
-        <Route exact path="/">
-          <Homepage />
-        </Route>
+      <section className="page-wrapper">
+        <Switch>
+          <Route exact path="/">
+            <Homepage />
+          </Route>
 
-        <Route path="/Vinyls">
-          <div className="vinyls-background"></div>
+          <Route path="/Vinyls">
+            <div className="vinyls-background"></div>
 
-          <Switch>
-            <Route exact path="/Vinyls/List">
-              <Vinyls />
-            </Route>
-            <Route exact path="/Vinyls/Add">
-              <AddVinyl />
-            </Route>
-            <Route exact path="/Vinyls/View">
-              <ViewVinyls />
-            </Route>
-            <Route exact path="/Vinyls/View/:id">
-              <Vinyl />
-            </Route>
-          </Switch>
-        </Route>
+            <Switch>
+              <Route exact path="/Vinyls/List">
+                <Vinyls />
+              </Route>
+              <Route exact path="/Vinyls/Add">
+                <AddVinyl />
+              </Route>
+              <Route exact path="/Vinyls/View">
+                <ViewVinyls />
+              </Route>
+              <Route exact path="/Vinyls/View/:id">
+                <Vinyl />
+              </Route>
+            </Switch>
+          </Route>
 
-        <Route path="/Plants">
-          <div className="plants-background"></div>
+          <Route path="/Plants">
+            <div className="plants-background"></div>
 
-          <Switch>
-            <Route exact path="/Plants/List">
-              <Plants />
-            </Route>
-            <Route exact path="/Plants/Add">
-              <AddPlant />
-            </Route>
-            <Route exact path="/Plants/View">
-              <ViewPlants />
-            </Route>
-            <Route exact path="/Plants/View/:id">
-              <Plant />
-            </Route>
-          </Switch>
-        </Route>
+            <Switch>
+              <Route exact path="/Plants/List">
+                <Plants />
+              </Route>
+              <Route exact path="/Plants/Add">
+                <AddPlant />
+              </Route>
+              <Route exact path="/Plants/View">
+                <ViewPlants />
+              </Route>
+              <Route exact path="/Plants/View/:id">
+                <Plant />
+              </Route>
+              <Route exact path="/Plants/View/:id/Edit">
+                <EditPlant />
+              </Route>
+            </Switch>
+          </Route>
 
-        <Route path="/Crystals">
-          <div className="crystals-background"></div>
+          <Route path="/Crystals">
+            <div className="crystals-background"></div>
 
-          <Switch>
-            <Route exact path="/Crystals/List">
-              <Crystals />
-            </Route>
-            <Route exact path="/Crystals/Add">
-              <AddCrystal />
-            </Route>
-            <Route exact path="/Crystals/View">
-              <ViewCrystals />
-            </Route>
-            <Route exact path="/Crystals/View/:id">
-              <Crystal />
-            </Route>
-          </Switch>
-        </Route>
-        <Route path="/signup">
-          <SignUp />
-        </Route>
-        <Route path="/signin">
-          <SignIn />
-        </Route>
-      </Switch>
+            <Switch>
+              <Route exact path="/Crystals/List">
+                <Crystals />
+              </Route>
+              <Route exact path="/Crystals/Add">
+                <AddCrystal />
+              </Route>
+              <Route exact path="/Crystals/View">
+                <ViewCrystals />
+              </Route>
+              <Route exact path="/Crystals/View/:id">
+                <Crystal />
+              </Route>
+            </Switch>
+          </Route>
+          <Route path="/signup">
+            <SignUp />
+          </Route>
+          <Route path="/signin">
+            <SignIn />
+          </Route>
+        </Switch>
+      </section>
+
       <footer>
-        Built with <i className=" tree fas fa-tree"></i> in Tampa, Florida{' '}
+        <p>
+          Built with <i className=" tree fas fa-tree"></i> in Tampa, Florida{' '}
+        </p>
       </footer>
     </>
   )

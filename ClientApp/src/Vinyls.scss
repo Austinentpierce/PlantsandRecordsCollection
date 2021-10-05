@@ -85,6 +85,8 @@ form.VinylAdds p:nth-child(odd) {
       rgba(255, 255, 255, 0.5)
     ),
     url(https://cdn.shopify.com/s/files/1/0005/6485/4899/files/pile-of-records.jpg?v=1567767319);
+  background-repeat: no-repeat;
+  background-size: cover;
   z-index: -1;
 }
 .DiffVinyls {
@@ -152,4 +154,14 @@ form.VinylAdds p:nth-child(odd) {
   margin: 1rem;
   font-size: 1.25rem;
   text-shadow: white 0.1rem 0.1rem;
+}
+.vinyl-leaf,
+.vinyls-vinyl {
+  color: red;
+}
+.vinyl-link {
+  color: black;
+}
+.Viewvinyllist {
+  padding: 0;
 }
