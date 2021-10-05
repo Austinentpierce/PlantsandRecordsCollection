@@ -33,7 +33,6 @@ namespace PlantsandRecordsCollection.Controllers
         // Returns a list of all your Vinyls
         //
         [HttpGet]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<IEnumerable<Vinyls>>> GetVinyls(string filter)
         {
             // Uses the database context in `_context` to request all of the Vinyls, sort
@@ -56,7 +55,6 @@ namespace PlantsandRecordsCollection.Controllers
         // to grab the id from the URL. It is then made available to us as the `id` argument to the method.
         //
         [HttpGet("{id}")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<Vinyls>> GetVinyls(int id)
         {
             // Find the vinyls in the database using `FindAsync` to look it up by id

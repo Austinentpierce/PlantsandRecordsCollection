@@ -100,7 +100,7 @@ export function App() {
         </Route>
       </Switch>
       <footer>
-        Built with <i className="fas fa-tree"></i> in Tampa, Florida{' '}
+        Built with <i className=" tree fas fa-tree"></i> in Tampa, Florida{' '}
       </footer>
     </>
   )

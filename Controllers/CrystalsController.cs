@@ -34,7 +34,6 @@ namespace PlantsandRecordsCollection.Controllers
         // Returns a list of all your Crystals
         //
         [HttpGet]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<IEnumerable<Crystals>>> GetCrystals(string filter)
         {
             if (filter == null)
@@ -57,7 +56,6 @@ namespace PlantsandRecordsCollection.Controllers
         // to grab the id from the URL. It is then made available to us as the `id` argument to the method.
         //
         [HttpGet("{id}")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<Crystals>> GetCrystals(int id)
         {
             // Find the crystals in the database using `FindAsync` to look it up by id

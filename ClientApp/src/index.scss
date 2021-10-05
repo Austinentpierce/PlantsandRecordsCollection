@@ -29,7 +29,7 @@ footer {
   font-family: 'Josefin Sans', sans-serif;
   text-align: center;
   text-decoration: underline;
-  text-shadow: white 0.05rem 0.05rem;
+  text-shadow: black 0.1rem 0.1rem;
   background-color: burlywood;
   border: black solid 0.1rem;
   font-size: 1rem;
@@ -38,6 +38,7 @@ footer {
   margin: 3rem 1rem 1.5rem 1rem;
   box-shadow: black 0.35rem 0.35rem;
   transform: 80vh;
+  color: white;
 }
 .WelcomeSignout {
   display: flex;
@@ -63,7 +64,7 @@ footer {
   box-shadow: black 0.35rem 0.35rem;
   border: black solid 0.1rem;
   font-family: 'Nunito', sans-serif;
-  text-shadow: black 0.05rem 0.05rem;
+  text-shadow: black 0.1rem 0.1rem;
   text-decoration: underline;
   font-size: 13px;
   color: white;
@@ -77,7 +78,8 @@ footer {
   text-shadow: black 0.1rem 0.1rem;
 }
 .leaf,
-.vinyl {
+.vinyl,
+.tree {
   color: darkgreen;
 }
 
