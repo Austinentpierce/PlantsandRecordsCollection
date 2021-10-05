@@ -91,7 +91,7 @@ form.VinylAdds p:nth-child(odd) {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1rem;
   list-style: none;
-  text-shadow: red 0.1rem 0.1rem;
+  text-shadow: white 0.1rem 0.1rem;
   text-align: center;
   padding: 0;
 }
@@ -120,4 +120,35 @@ form.VinylAdds p:nth-child(odd) {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.DeleteVinyl {
+  min-width: 300px;
+  min-height: 60px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: black;
+  background: linear-gradient(to bottom right, red, burlywood);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px red;
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  position: relative;
+  padding: 10px;
+  text-decoration: none;
+  margin-top: 4rem;
+}
+.SingleVinyl {
+  list-style: none;
+  text-align: center;
+  padding: 1rem;
+  font-family: 'Josefin Sans', sans-serif;
+}
+.SingleVinylList {
+  margin: 1rem;
+  font-size: 1.25rem;
+  text-shadow: white 0.1rem 0.1rem;
 }

@@ -6,6 +6,7 @@ export type PlantType = {
   watering: string
   pot: number
   description: string
+  photoURL: string
 }
 export type VinylType = {
   id: number | undefined
@@ -46,4 +47,7 @@ export type LoggedinUser = {
 export type LoginSuccess = {
   token: string
   user: LoggedinUser
+}
+export type UploadResponse = {
+  url: string
 }

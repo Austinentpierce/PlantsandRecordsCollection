@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { useMutation } from 'react-query'
 import { useHistory } from 'react-router'
-// import { Link } from 'react-router-dom'
-import { APIError, PlantType } from '../types'
+import { useDropzone } from 'react-dropzone'
+import { APIError, PlantType, UploadResponse } from '../types'
 
 async function submitNewPlant(plantToCreate: PlantType) {
   const response = await fetch('/api/Plants/', {
@@ -28,8 +28,10 @@ export function AddPlant() {
     watering: '',
     pot: 0,
     description: '',
+    photoURL: '',
   })
   const [errorMessage, setErrorMessage] = useState('')
+  const [isUploading, setIsUploading] = useState(false)
   const createNewPlant = useMutation(submitNewPlant, {
     onSuccess: function () {
       history.push('/')
@@ -57,6 +59,56 @@ export function AddPlant() {
     const updatedPlant = { ...newPlant, [fieldName]: value }
 
     setNewPlant(updatedPlant)
+  }
+
+  async function uploadFile(fileToUpload: File) {
+    const formData = new FormData()
+
+    formData.append('file', fileToUpload)
+
+    const response = await fetch('/api/Uploads', {
+      method: 'POST',
+      body: formData,
+    })
+
+    if (response.ok) {
+      return response.json()
+    } else {
+      throw 'Unable to upload image!'
+    }
+  }
+
+  function onDropFile(acceptedFiles: File[]) {
+    const fileToUpload = acceptedFiles[0]
+    setIsUploading(true)
+    uploadFileMutation.mutate(fileToUpload)
+  }
+  const { getRootProps, getInputProps, isDragActive } = useDropzone({
+    onDrop: onDropFile,
+  })
+
+  const uploadFileMutation = useMutation(uploadFile, {
+    onSuccess: function (apiResponse: UploadResponse) {
+      const url = apiResponse.url
+
+      setNewPlant({ ...newPlant, photoURL: url })
+    },
+
+    onError: function (error: string) {
+      setErrorMessage(error)
+    },
+    onSettled: function () {
+      setIsUploading(false)
+    },
+  })
+  let dropZoneMessage = 'Drag a picture of the restaurant here to upload!'
+
+  if (isUploading) {
+    dropZoneMessage = 'Uploading...'
+  }
+
+  if (isDragActive) {
+    dropZoneMessage = 'Drop the files here ...'
   }
 
   return (
@@ -117,10 +169,22 @@ export function AddPlant() {
             onChange={handleStringInputChange}
           />
         </p>
+        {newPlant.photoURL ? (
+          <p>
+            <img alt="Restaurant Photo" width={200} src={newPlant.photoURL} />
+          </p>
+        ) : null}
         <p className="form-inputs">
-          <input type="file" name="picture" />
+          {/* <input type="file" onChange={onDropFile}/> */}
+          <div className="file-drop-zone">
+            <div {...getRootProps()}>
+              <input {...getInputProps()} />
+              {isDragActive
+                ? 'Drop the files here ...'
+                : 'Drag a picture of the restaurant here to upload!'}
+            </div>
+          </div>
         </p>
-
         <input type="submit" value="Submit" className="SubmitPlant" />
       </form>
     </main>

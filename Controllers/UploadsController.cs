@@ -80,7 +80,6 @@ namespace PlantsandRecordsCollection.Controllers
                 return BadRequest("Upload failed");
             }
 
-            return Ok();
         }
     }
 }

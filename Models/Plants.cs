@@ -25,6 +25,8 @@ namespace PlantsandRecordsCollection.Models
         [Required(ErrorMessage = " You must provide a description. ")]
         public string Description { get; set; }
 
+        public string PhotoURL { get; set; }
+
 
     }
 }
