@@ -145,7 +145,7 @@ form.SkyBlueCrystal p:nth-child(odd) {
   position: relative;
   padding: 10px;
   text-decoration: none;
-  margin-top: 3rem;
+  margin-top: 4rem;
 }
 .CrystalsPage form {
   display: flex;
@@ -161,4 +161,24 @@ form.SkyBlueCrystal p:nth-child(odd) {
 }
 .Viewcrystallist {
   padding: 0;
+}
+.CrystalEditButton {
+  min-width: 300px;
+  min-height: 60px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: black;
+  background: linear-gradient(to bottom right, purple, burlywood);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px purple;
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  position: relative;
+  padding: 10px;
+  text-decoration: none;
+  margin-top: 4rem;
 }
