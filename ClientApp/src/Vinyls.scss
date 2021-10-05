@@ -13,7 +13,7 @@
 
 .vinylpic img {
   border-radius: 0.85rem;
-  box-shadow: black 0.5rem 0.5rem;
+  box-shadow: white 0.5rem 0.5rem;
   border: solid black;
   // animation: rotation 6s infinite linear;
 }
@@ -94,6 +94,7 @@ form.VinylAdds p:nth-child(odd) {
   text-shadow: white 0.1rem 0.1rem;
   text-align: center;
   padding: 0;
+  color: black;
 }
 .SubmitVinyl {
   min-width: 300px;

@@ -9,10 +9,10 @@ html {
 }
 body {
   min-height: 100%;
-  border: black solid 0.5rem;
+  border: white solid 0.5rem;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(to bottom right, darkgreen, burlywood);
+  background-image: url(https://thewallpaper.co/wp-content/uploads/2020/09/hd-nature-wallpapers-amazing-landscape-images-free-habitat-images-sky-green-nature-of-wallpapers-endless-view-flowers-2262x1504-1.jpg);
 }
 header {
   display: flex;
@@ -37,6 +37,7 @@ footer {
   height: 20px;
   margin: 3rem 1rem 1.5rem 1rem;
   box-shadow: black 0.35rem 0.35rem;
+  transform: 80vh;
 }
 .WelcomeSignout {
   display: flex;
@@ -70,13 +71,15 @@ footer {
   margin-top: 0.5rem;
   font-size: 1.1rem;
   font-family: 'Josefin Sans', sans-serif;
-  color: black;
+  color: white;
   text-decoration: none;
+  text-shadow: black 0.1rem 0.1rem;
 }
 .leaf,
 .vinyl {
-  color: black;
+  color: darkgreen;
 }
+
 .formError {
   padding: 1rem;
   font-size: 1.25rem;

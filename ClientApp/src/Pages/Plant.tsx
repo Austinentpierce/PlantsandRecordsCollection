@@ -21,6 +21,7 @@ const NullPlant: PlantType = {
   watering: '',
   pot: 0,
   description: '',
+  photoURL: '',
 }
 
 export function Plant() {

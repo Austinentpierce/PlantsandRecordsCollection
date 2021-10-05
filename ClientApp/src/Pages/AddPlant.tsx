@@ -101,14 +101,14 @@ export function AddPlant() {
       setIsUploading(false)
     },
   })
-  let dropZoneMessage = 'Drag a picture of the restaurant here to upload!'
+  // let dropZoneMessage = 'Drag a picture of the restaurant here to upload!'
 
   if (isUploading) {
-    dropZoneMessage = 'Uploading...'
+    // dropZoneMessage = 'Uploading...'
   }
 
   if (isDragActive) {
-    dropZoneMessage = 'Drop the files here ...'
+    // dropZoneMessage = 'Drop the files here ...'
   }
 
   return (
@@ -171,7 +171,7 @@ export function AddPlant() {
         </p>
         {newPlant.photoURL ? (
           <p>
-            <img alt="Restaurant Photo" width={200} src={newPlant.photoURL} />
+            <img alt="Plant Photo" width={200} src={newPlant.photoURL} />
           </p>
         ) : null}
         <p className="form-inputs">
