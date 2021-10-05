@@ -164,3 +164,23 @@ form.brown-and-green p:nth-child(odd) {
 .plants-vinyl {
   color: darkgreen;
 }
+.PlantEditButton {
+  min-width: 300px;
+  min-height: 60px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: black;
+  background: linear-gradient(to bottom right, darkgreen, burlywood);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px darkgreen;
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  position: relative;
+  padding: 10px;
+  text-decoration: none;
+  margin-top: 4rem;
+}

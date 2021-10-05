@@ -83,7 +83,7 @@ namespace PlantsandRecordsCollection.Controllers
         // new values for the record.
         //
         [HttpPut("{id}")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<IActionResult> PutVinyls(int id, Vinyls vinyls)
         {
             // If the ID in the URL does not match the ID in the supplied request body, return a bad request
@@ -133,7 +133,7 @@ namespace PlantsandRecordsCollection.Controllers
         // new values for the record.
         //
         [HttpPost]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<Vinyls>> PostVinyls(Vinyls vinyls)
         {
             // Indicate to the database context we want to add this new record
@@ -152,7 +152,7 @@ namespace PlantsandRecordsCollection.Controllers
         // to grab the id from the URL. It is then made available to us as the `id` argument to the method.
         //
         [HttpDelete("{id}")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<IActionResult> DeleteVinyls(int id)
         {
             // Find this vinyls by looking for the specific id

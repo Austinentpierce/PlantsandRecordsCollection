@@ -1,6 +1,7 @@
 import React from 'react'
 import { useQuery } from 'react-query'
 import { useHistory, useParams } from 'react-router'
+import { Link } from 'react-router-dom'
 import { CrystalType } from '../types'
 
 async function loadOneCrystal(id: string) {
@@ -53,6 +54,12 @@ export function Crystal() {
       <li className="SingleCrystalList">{crystal.size}</li>
       <li className="SingleCrystalList"> {crystal.color}</li>
       <li className="SingleCrystalList"> {crystal.description}</li>
+
+      <p>
+        <Link to={`/Crystals/View/${crystal.id}/edit`}>
+          <button className="CrystalEditButton">EDIT</button>
+        </Link>
+      </p>
 
       <button
         className="DeleteCrystal"

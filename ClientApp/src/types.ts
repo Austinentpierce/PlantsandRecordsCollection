@@ -6,7 +6,6 @@ export type PlantType = {
   watering: string
   pot: number
   description: string
-  photoURL: string
 }
 export type VinylType = {
   id: number | undefined

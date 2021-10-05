@@ -1,14 +1,13 @@
 import React, { useState } from 'react'
 import { useMutation, useQuery } from 'react-query'
 import { useHistory, useParams } from 'react-router'
-// import { useDropzone } from 'react-dropzone'
 import { APIError, PlantType } from '../types'
 
-async function submitNewPlant(plantToCreate: PlantType) {
-  const response = await fetch('/api/Plants/', {
-    method: 'POST',
+async function submitEditedPlant(plantToUpdate: PlantType) {
+  const response = await fetch(`/api/Plants/${plantToUpdate.id}`, {
+    method: 'PUT',
     headers: { 'content-type': 'application/json' },
-    body: JSON.stringify(plantToCreate),
+    body: JSON.stringify(plantToUpdate),
   })
   if (response.ok) {
     return response.json()
@@ -25,32 +24,19 @@ async function loadOnePlant(id: string) {
     throw await response.json()
   }
 }
-const NullPlant: PlantType = {
-  id: undefined,
-  name: '',
-  type: '',
-  location: '',
-  watering: '',
-  pot: 0,
-  description: '',
-  photoURL: '',
-}
 
 export function EditPlant() {
   const history = useHistory()
   const { id } = useParams<{ id: string }>()
 
-  const { data: plant = NullPlant } = useQuery<PlantType>(
-    ['one-plant', id],
-    () => loadOnePlant(id),
-    {
-      onSuccess: function () {
-        console.log('Loaded the plant')
-      },
-    }
-  )
+  useQuery<PlantType>(['one-plant', id], () => loadOnePlant(id), {
+    onSuccess: function (plantsBeingLoaded) {
+      console.log(plantsBeingLoaded)
+      setUpdatingPlant(plantsBeingLoaded)
+    },
+  })
 
-  const [updatedPlant, setUpdatedPlant] = useState<PlantType>({
+  const [updatingPlant, setUpdatingPlant] = useState<PlantType>({
     id: undefined,
     name: '',
     type: '',
@@ -58,11 +44,9 @@ export function EditPlant() {
     watering: '',
     pot: 0,
     description: '',
-    photoURL: '',
   })
   const [errorMessage, setErrorMessage] = useState('')
-  // const [isUploading, setIsUploading] = useState(false)
-  const createNewPlant = useMutation(submitNewPlant, {
+  const updateThePlant = useMutation(submitEditedPlant, {
     onSuccess: function () {
       history.push('/')
     },
@@ -77,76 +61,26 @@ export function EditPlant() {
     const value = event.target.value
     const fieldName = event.target.name
 
-    const NewUpdatedPlant = { ...updatedPlant, [fieldName]: value }
+    const NewUpdatedPlant = { ...updatingPlant, [fieldName]: value }
 
-    setUpdatedPlant(NewUpdatedPlant)
+    setUpdatingPlant(NewUpdatedPlant)
   }
 
   function handleStringInputChange(event: React.ChangeEvent<HTMLInputElement>) {
     const value = event.target.value
     const fieldName = event.target.name
 
-    const newUpdatedPlant = { ...updatedPlant, [fieldName]: value }
+    const NewUpdatedPlant = { ...updatingPlant, [fieldName]: value }
 
-    setUpdatedPlant(newUpdatedPlant)
+    setUpdatingPlant(NewUpdatedPlant)
   }
-
-  // async function uploadFile(fileToUpload: File) {
-  //   const formData = new FormData()
-
-  //   formData.append('file', fileToUpload)
-
-  //   const response = await fetch('/api/Uploads', {
-  //     method: 'POST',
-  //     body: formData,
-  //   })
-
-  //   if (response.ok) {
-  //     return response.json()
-  //   } else {
-  //     throw 'Unable to upload image!'
-  //   }
-  // }
-
-  // function onDropFile(acceptedFiles: File[]) {
-  //   const fileToUpload = acceptedFiles[0]
-  //   setIsUploading(true)
-  //   uploadFileMutation.mutate(fileToUpload)
-  // }
-  // const { getRootProps, getInputProps, isDragActive } = useDropzone({
-  //   onDrop: onDropFile,
-  // })
-
-  // const uploadFileMutation = useMutation(uploadFile, {
-  //   onSuccess: function (apiResponse: UploadResponse) {
-  //     const url = apiResponse.url
-
-  //     setNewPlant({ ...newPlant, photoURL: url })
-  //   },
-
-  //   onError: function (error: string) {
-  //     setErrorMessage(error)
-  //   },
-  //   onSettled: function () {
-  //     setIsUploading(false)
-  //   },
-  // })
-  // let dropZoneMessage = 'Drag a picture of the restaurant here to upload!'
-
-  // if (isUploading) {
-  //   // dropZoneMessage = 'Uploading...'
-  // }
-
-  // if (isDragActive) {
-  //   // dropZoneMessage = 'Drop the files here ...'
-  // }
 
   return (
     <main className="PlantsPage">
       <form
         onSubmit={(event) => {
           event.preventDefault()
-          createNewPlant.mutate(updatedPlant)
+          updateThePlant.mutate(updatingPlant)
         }}
         className="brown-and-green"
       >
@@ -155,7 +89,7 @@ export function EditPlant() {
           <input
             name="name"
             placeholder="Enter plant's name"
-            value={updatedPlant.name}
+            value={updatingPlant.name}
             onChange={handleStringInputChange}
           />
         </p>
@@ -163,7 +97,7 @@ export function EditPlant() {
           <input
             name="type"
             placeholder="Normal ,Herb, Fruit, Vegetable? "
-            value={updatedPlant.type}
+            value={updatingPlant.type}
             onChange={handleStringInputChange}
           />
         </p>
@@ -171,7 +105,7 @@ export function EditPlant() {
           <input
             name="location"
             placeholder="Indoor or Outdoor?"
-            value={updatedPlant.location}
+            value={updatingPlant.location}
             onChange={handleStringInputChange}
           />
         </p>
@@ -179,7 +113,7 @@ export function EditPlant() {
           <input
             name="watering"
             placeholder="How often does it need water?"
-            value={updatedPlant.watering}
+            value={updatingPlant.watering}
             onChange={handleStringInputChange}
           />
         </p>
@@ -187,7 +121,7 @@ export function EditPlant() {
           <input
             name="pot"
             placeholder="Enter Pot number plant is in"
-            value={updatedPlant.pot}
+            value={updatingPlant.pot}
             onChange={handleNumberInputChange}
           />
         </p>
@@ -195,26 +129,11 @@ export function EditPlant() {
           <input
             name="description"
             placeholder="Describe the plant"
-            value={updatedPlant.description}
+            value={updatingPlant.description}
             onChange={handleStringInputChange}
           />
         </p>
-        {updatedPlant.photoURL ? (
-          <p>
-            <img alt=" Photo" width={200} src={updatedPlant.photoURL} />
-          </p>
-        ) : null}
-        <p className="form-inputs">
-          {/* <input type="file" onChange={onDropFile}/> */}
-          {/* <div className="file-drop-zone">
-            <div {...getRootProps()}>
-              <input {...getInputProps()} />
-              {isDragActive
-                ? 'Drop the files here ...'
-                : 'Drag a picture of the restaurant here to upload!'}
-            </div>
-          </div> */}
-        </p>
+        <p className="form-inputs"></p>
         <input type="submit" value="Submit" className="SubmitPlant" />
       </form>
     </main>

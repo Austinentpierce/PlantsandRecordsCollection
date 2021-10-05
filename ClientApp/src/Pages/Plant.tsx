@@ -1,6 +1,7 @@
 import React from 'react'
 import { useQuery } from 'react-query'
 import { useHistory, useParams } from 'react-router'
+import { Link } from 'react-router-dom'
 import { PlantType } from '../types'
 
 async function loadOnePlant(id: string) {
@@ -21,7 +22,6 @@ const NullPlant: PlantType = {
   watering: '',
   pot: 0,
   description: '',
-  photoURL: '',
 }
 
 export function Plant() {
@@ -49,7 +49,7 @@ export function Plant() {
     ['one-plant', id],
     () => loadOnePlant(id)
   )
-  console.log(NullPlant)
+
   return (
     <main className="SinglePlant">
       <h2 className="TitleName">{plant.name} </h2>
@@ -58,7 +58,11 @@ export function Plant() {
       <li className="SinglePlantList"> {plant.watering}</li>
       <li className="SinglePlantList"> {plant.pot}</li>
       <li className="SinglePlantList"> {plant.description}</li>
-
+      <p>
+        <Link to={`/Plants/View/${plant.id}/edit`}>
+          <button className="PlantEditButton">EDIT</button>
+        </Link>
+      </p>
       <button
         className="DeletePlant"
         onClick={(event) => handleDelete(event, plant.id!)}

@@ -1,6 +1,7 @@
 import React from 'react'
 import { useQuery } from 'react-query'
 import { useHistory, useParams } from 'react-router'
+import { Link } from 'react-router-dom'
 import { VinylType } from '../types'
 
 async function loadOneVinyl(id: string) {
@@ -46,13 +47,19 @@ export function Vinyl() {
     ['one-vinyl', id],
     () => loadOneVinyl(id)
   )
-  console.log(NullVinyl)
+
   return (
     <main className="SingleVinyl">
       <h2 className="TitleName">{vinyl.album} </h2>
       <li className="SingleVinylList">{vinyl.artist}</li>
       <li className="SingleVinylList"> {vinyl.releaseYear}</li>
       <li className="SingleVinylList"> {vinyl.genre}</li>
+
+      <p>
+        <Link to={`/Vinyls/View/${vinyl.id}/edit`}>
+          <button className="VinylEditButton">EDIT</button>
+        </Link>
+      </p>
 
       <button
         className="DeleteVinyl"

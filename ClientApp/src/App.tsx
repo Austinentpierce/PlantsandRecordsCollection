@@ -16,6 +16,8 @@ import { Plant } from './Pages/Plant'
 import { Vinyl } from './Pages/Vinyl'
 import { Crystal } from './Pages/Crystal'
 import { EditPlant } from './Pages/EditPlant'
+import { EditVinyl } from './Pages/EditVinyl'
+import { EditCrystal } from './Pages/EditCrystal'
 
 export function App() {
   return (
@@ -80,6 +82,9 @@ export function App() {
               <Route exact path="/Vinyls/View/:id">
                 <Vinyl />
               </Route>
+              <Route exact path="/Vinyls/View/:id/Edit">
+                <EditVinyl />
+              </Route>
             </Switch>
           </Route>
 
@@ -120,6 +125,9 @@ export function App() {
               </Route>
               <Route exact path="/Crystals/View/:id">
                 <Crystal />
+              </Route>
+              <Route exact path="/Crystals/View/:id/Edit">
+                <EditCrystal />
               </Route>
             </Switch>
           </Route>

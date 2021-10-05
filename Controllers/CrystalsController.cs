@@ -84,7 +84,7 @@ namespace PlantsandRecordsCollection.Controllers
         // new values for the record.
         //
         [HttpPut("{id}")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<IActionResult> PutCrystals(int id, Crystals crystals)
         {
             // If the ID in the URL does not match the ID in the supplied request body, return a bad request
@@ -134,7 +134,7 @@ namespace PlantsandRecordsCollection.Controllers
         // new values for the record.
         //
         [HttpPost]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<Crystals>> PostCrystals(Crystals crystals)
         {
             // Indicate to the database context we want to add this new record
@@ -153,7 +153,7 @@ namespace PlantsandRecordsCollection.Controllers
         // to grab the id from the URL. It is then made available to us as the `id` argument to the method.
         //
         [HttpDelete("{id}")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<IActionResult> DeleteCrystals(int id)
         {
             // Find this crystals by looking for the specific id

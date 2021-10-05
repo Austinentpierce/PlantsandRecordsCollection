@@ -13,7 +13,7 @@
 
 .vinylpic img {
   border-radius: 0.85rem;
-  box-shadow: white 0.35rem 0.35rem;
+  box-shadow: white 12px 12px 24px;
   border: solid black;
   // animation: rotation 6s infinite linear;
 }
@@ -164,4 +164,24 @@ form.VinylAdds p:nth-child(odd) {
 }
 .Viewvinyllist {
   padding: 0;
+}
+.VinylEditButton {
+  min-width: 300px;
+  min-height: 60px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: black;
+  background: linear-gradient(to bottom right, red, burlywood);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px red;
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  position: relative;
+  padding: 10px;
+  text-decoration: none;
+  margin-top: 4rem;
 }
