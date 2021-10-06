@@ -1,4 +1,9 @@
 {
   "name": "PlantsandRecordsCollection",
-  "private": "true"
+  "private": "true",
+  "devDependencies": {
+    "@typescript-eslint/parser": "^4.33.0",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.24.2"
+  }
 }
