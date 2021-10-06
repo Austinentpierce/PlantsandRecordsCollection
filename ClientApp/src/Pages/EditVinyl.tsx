@@ -116,9 +116,7 @@ export function EditVinyl() {
             onChange={handleStringInputChange}
           />
         </p>
-        <p className="addVinylForms">
-          <input type="file" name="picture" />
-        </p>
+
         <input type="submit" value="Submit" className="SubmitVinyl" />
       </form>
     </main>
